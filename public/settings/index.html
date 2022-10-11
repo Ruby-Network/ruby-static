@@ -17,6 +17,7 @@
   <script src="../title.js"></script>
   <script src="../blank.js"></script>
   <script src="settings.js"></script>
+  <script src="./about_blank.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,6 @@
       <a href="/" class="nav-menu"><i class="material-icons">home</i> HOME</a>
       <a href="/apps" class="nav-menu"><i class="material-icons">apps</i> APPS</a>
       <a href="/games" class="nav-menu"><i class="material-icons">sports_esports</i> GAMES</a>
-      <a href="/emulators" class="nav-menu"><i class="material-icons">videogame_asset</i> EMULATORS</a>
       <a href="/settings" class="nav-menu"><i class="material-icons">settings</i> SETTINGS</a>
     </nav>
   </div>
@@ -80,6 +80,16 @@
       <option value="Osana">Osana</option>
     </select>
 </div>
+
+<div class="settings-div">
+  <p>Steath Mode </p>
+  <p>Opens pages as about blank when you search</p>
+  <label class="switch">
+    <input type="checkbox"  onclick="abLibCloak(url = document.getElementById('input').textContent)">
+    <span class="slider round"></span>
+  </label>
+</div>
+
 </body>
 
 </html>
