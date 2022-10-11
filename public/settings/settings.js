@@ -1,3 +1,5 @@
+//Browser Change
+
 function browserChange() {
   var inputVal = document.getElementById("select-browser").value;
   console.log(inputVal);
@@ -28,4 +30,10 @@ function setProxy() {
   const type = selector.value;
 
   localStorage.setItem("type", type);
+}
+
+//AbLibCloak
+function abLibCloak() {
+    let win = window.open('')
+    win.document.write(`<style>::-webkit-scrollbar { display: none; } iframe { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; }</style><iframe src=${url}>`)
 }
