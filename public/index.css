@@ -89,15 +89,19 @@ p {
 }
 
 .nav-menu {
-    text-align: center;
     color: white;
     padding: 12px;
-    align-items: center;
+    font-size: 20px;
 }
+ion-icon {
+    font-size: 25px;
+  }
 
-.nav-menu .material-icons {
+.nav-menu ion-icon {
     margin-right: 12px;
     vertical-align: middle;
+    text-align: center;
+    align-items: center;
 }
 
 .nav-link {
@@ -185,7 +189,7 @@ input {
 input[type=text] {
     transition: 0.5s;
     color: white;
-
+    text-align: center;
 
 }
 
@@ -248,11 +252,11 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
-.form {
+.search {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 nav {
