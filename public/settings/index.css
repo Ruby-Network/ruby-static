@@ -32,19 +32,15 @@
 }
 
 body {
-  background-image: -webkit-gradient(
-      linear,
+  background-image: -webkit-gradient(linear,
       left top,
       left bottom,
       color-stop(2%, rgba(0, 0, 0, 0.6)),
-      color-stop(98%, rgba(0, 0, 0, 0.6))
-    ),
+      color-stop(98%, rgba(0, 0, 0, 0.6))),
     url("https://uploads-ssl.webflow.com/62b89a760ac0e96394730919/62b89c634d120689b2392c39_background.jpg");
-  background-image: linear-gradient(
-      180deg,
+  background-image: linear-gradient(180deg,
       rgba(0, 0, 0, 0.6) 2%,
-      rgba(0, 0, 0, 0.6) 98%
-    ),
+      rgba(0, 0, 0, 0.6) 98%),
     url("https://uploads-ssl.webflow.com/62b89a760ac0e96394730919/62b89c634d120689b2392c39_background.jpg");
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
@@ -345,15 +341,15 @@ p {
   transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #000000;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px black;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);

@@ -1,130 +1,92 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Weeb Central</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta
-      name="description"
-      content="Weeb Central is a web search engine that help's end internet censorship
-    Made by Hiro 🔥#0001"
-    />
-    <meta
-      name="keywords"
-      content="Weeb-Central, Proxy, Proxies, Discord, custom, weeb, central, "
-    />
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/img/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/apple-touch-icon.png"
-      href="/img/favicon.ico"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
 
-    <script src="../title.js"></script>
-    <script src="../blank.js"></script>
-    <script src="/js/settings.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Weeb Central</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="description" content="Weeb Central is a web search engine that help's end internet censorship
+    Made by Hiro 🔥#0001" />
+  <meta name="keywords" content="Weeb-Central, Proxy, Proxies, Discord, custom, weeb, central, " />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+  <link rel="icon" type="image/apple-touch-icon.png" href="/img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-  <body>
-    <div class="header">
-      <h1 href="/index.html">WEEB CENTRAL</h1>
-      <nav role="navigation" class="navbar">
-        <a href="/" class="nav-menu"><i class="material-icons">home</i> HOME</a>
-        <a href="/apps" class="nav-menu"
-          ><i class="material-icons">apps</i> APPS</a
-        >
-        <a href="/games" class="nav-menu"
-          ><i class="material-icons">sports_esports</i> GAMES</a
-        >
-        <a href="/settings" class="nav-menu"
-          ><i class="material-icons">settings</i> SETTINGS</a
-        >
-      </nav>
+  <script src="../title.js"></script>
+  <script src="../blank.js"></script>
+  <script src="/js/settings.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1 href="/index.html">WEEB CENTRAL</h1>
+    <nav role="navigation" class="navbar">
+      <a href="/" class="nav-menu"><i class="material-icons">home</i> HOME</a>
+      <a href="/apps" class="nav-menu"><i class="material-icons">apps</i> APPS</a>
+      <a href="/games" class="nav-menu"><i class="material-icons">sports_esports</i> GAMES</a>
+      <a href="/settings" class="nav-menu"><i class="material-icons">settings</i> SETTINGS</a>
+    </nav>
+  </div>
+  <div class="hero-subtitle">SETTINGS</div>
+  <h1 class="hero-heading">WEEB CENTRAL</h1>
+
+  <div class="container">
+    <div class="settings-div">
+      <p>Tab Title</p>
+      <p>Change the title of the webpage</p>
+
+      <input value="Weeb Central" class="title" id="title" placeholder="No Title"
+        oninput="document.title = this.value || 'Weeb-Central'; set('title', this.value)" />
     </div>
-    <div class="hero-subtitle">SETTINGS</div>
-    <h1 class="hero-heading">WEEB CENTRAL</h1>
-
-    <div class="container">
-      <div class="settings-div">
-        <p>Tab Title</p>
-        <p>Change the title of the webpage</p>
-
-        <input
-          value="Weeb Central"
-          class="title"
-          id="title"
-          placeholder="No Title"
-          oninput="document.title = this.value || 'Weeb-Central'; set('title', this.value)"
-        />
-      </div>
-      <div class="settings-div">
-        <p>Tab Icon</p>
-        <p>Change the icon of the webpage</p>
-        <input
-          value="https://weeb-central.icu/index.svg"
-          class="title"
-          id="title"
-          placeholder="Favicon"
-          onchange="faviconChange(this.value)"
-        />
-      </div>
-      <div class="settings-div">
-        <p>about:blank</p>
-
-        <p>Opens the page as about:blank</p>
-
-        <button onclick="goBlank()" class="button">About:Blank</button>
-      </div>
-      <div class="settings-div">
-        <p>Select Browser (dosen't work)</p>
-
-        <p>Choose what browser you want to use</p>
-        <select
-          class="select-browser"
-          id="select-browser"
-          onchange="browserChange()"
-        >
-          <option value="google">Google</option>
-          <option value="bing">Bing</option>
-          <option value="duckduckgo">DuckDuckGo</option>
-          <option value="yahoo">Yahoo</option>
-          <option value="brave">Brave</option>
-        </select>
-      </div>
-      <div class="settings-div">
-        <p>Select Proxy (Dosen't work yet)</p>
-        <p>Choose what proxy you want to use</p>
-
-        <select class="select-proxy" id="select-proxy" onchange="setProxy();">
-          <option value="Ultraviolet">Ultraviolet</option>
-          <option value="Aero">Aero</option>
-          <option value="Stomp">Stomp</option>
-          <option value="DIP">Dip</option>
-          <option value="Osana">Osana</option>
-        </select>
-      </div>
-
-      <div class="settings-div">
-        <p>Steath Mode</p>
-        <p>Opens pages as about blank when you search</p>
-        <label class="switch">
-          <input
-            type="checkbox"
-            onclick="abLibCloak(url = document.getElementById('input').textContent)"
-          />
-          <span class="slider round"></span>
-        </label>
-      </div>
+    <div class="settings-div">
+      <p>Tab Icon</p>
+      <p>Change the icon of the webpage</p>
+      <input value="https://weeb-central.icu/index.svg" class="title" id="title" placeholder="Favicon"
+        onchange="faviconChange(this.value)" />
     </div>
-  </body>
+    <div class="settings-div">
+      <p>about:blank</p>
+
+      <p>Opens the page as about:blank</p>
+
+      <button onclick="goBlank()" class="button">About:Blank</button>
+    </div>
+    <div class="settings-div">
+      <p>Select Browser (dosen't work)</p>
+
+      <p>Choose what browser you want to use</p>
+      <select class="select-browser" id="select-browser" onchange="browserChange()">
+        <option value="google">Google</option>
+        <option value="bing">Bing</option>
+        <option value="duckduckgo">DuckDuckGo</option>
+        <option value="yahoo">Yahoo</option>
+        <option value="brave">Brave</option>
+      </select>
+    </div>
+    <div class="settings-div">
+      <p>Select Proxy (Dosen't work yet)</p>
+      <p>Choose what proxy you want to use</p>
+
+      <select class="select-proxy" id="select-proxy" onchange="setProxy();">
+        <option value="Ultraviolet">Ultraviolet</option>
+        <option value="Aero">Aero</option>
+        <option value="Stomp">Stomp</option>
+        <option value="DIP">Dip</option>
+        <option value="Osana">Osana</option>
+      </select>
+    </div>
+
+    <div class="settings-div">
+      <p>Steath Mode</p>
+      <p>Opens pages as about blank when you search</p>
+      <label class="switch">
+        <input type="checkbox" onclick="abLibCloak(url = document.getElementById('input').textContent)" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</body>
+
 </html>
