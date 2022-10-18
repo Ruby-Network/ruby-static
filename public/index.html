@@ -1,81 +1,136 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Weeb Central</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      name="description"
+      content="Weeb Central is a web search engine that help's end internet censorship
+    Made by Hiro 🔥"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Weeb Central</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <meta name="description" content="Weeb Central is a web search engine that help's end internet censorship
-    Made by Hiro 🔥" />
+    <meta
+      name="keywords"
+      content="Weeb-Central, Proxy, Proxies, Discord, custom, weeb, central, weeb-network.  "
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/apple-touch-icon.png"
+      href="/img/favicon.ico"
+    />
+    <script src="./js/index.js"></script>
+    <script src="./title.js"></script>
+    <script src="./blank.js"></script>
 
-  <meta name="keywords" content="Weeb-Central, Proxy, Proxies, Discord, custom, weeb, central, weeb-network.  " />
-  <link rel="stylesheet" href="index.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
-  <link rel="icon" type="image/apple-touch-icon.png" href="/img/favicon.ico" />
-  <script src="./index.js" defer></script>
-  <script src="./title.js"></script>
-  <script src="./blank.js"></script>
+    <!-- <script src="browser.js"></script> What is this? -->
+    <!-- <script async src="https://arc.io/widget.min.js#K3htVdqJ"></script> TODO: Add this back -->
+  </head>
 
-  <!-- <script src="browser.js"></script> What is this? -->
-  <!-- <script async src="https://arc.io/widget.min.js#K3htVdqJ"></script> TODO: Add this back -->
-</head>
+  <body>
+    <header>
+      <h1 class="logo">WEEB CENTRAL</h1>
+      <nav role="navigation" class="navbar">
+        <ul>
+          <li>
+            <a href="/" class="nav-menu">
+              <ion-icon name="home"></ion-icon>
+              HOME
+            </a>
+          </li>
+          <li>
+            <a href="/apps" class="nav-menu"
+              ><ion-icon name="apps"></ion-icon>
+              APPS
+            </a>
+          </li>
+          <li>
+            <a href="/games" class="nav-menu"
+              ><ion-icon name="game-controller"></ion-icon>
+              GAMES
+            </a>
+          </li>
+          <li>
+            <a href="/settings" class="nav-menu"
+              ><ion-icon name="settings"></ion-icon>
+              SETTINGS
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <div class="header">
-    <h1 class="logo">WEEB CENTRAL</h1>
-    <nav role="navigation" class="navbar">
-      <a href="/" class="nav-menu">
-        <ion-icon name="home"></ion-icon>
-        HOME
-      </a>
-      <a href="/apps" class="nav-menu">
-        <ion-icon name="apps"></ion-icon>
-        APPS
-      </a>
-      <a href="/games" class="nav-menu">
-        <ion-icon name="game-controller"></ion-icon>
-        GAMES
-      </a>
-      <a href="/settings" class="nav-menu">
-        <ion-icon name="settings"></ion-icon>
-        SETTINGS
-      </a>
-    </nav>
-  </div>
+    <div class="hero-container w-container">
+      <h1 class="hero-heading">WEEB CENTRAL</h1>
+      <div class="search">
+        <input
+          id="omnibox"
+          type="text"
+          class="input__box"
+          placeholder="Privately Search the web..."
+        />
+        <button type="submit">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </div>
+    </div>
 
-  <div class="hero-container w-container">
-    <h1 class="hero-heading">WEEB CENTRAL</h1>
-    <form class="search submitFIX">
-      <input id="omnibox" type="text" class="input__box" placeholder="Privately Search the web..." />
-      <button type="submit">
-        <ion-icon name="search"></ion-icon>
-      </button>
-    </form>
-  </div>
-
-  <script src="./uv/uv.bundle.js"></script>
-  <script src="./uv/uv.config.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <!-- <script src="./stomp/bootstrapper.js"></script>
+    <script src="./uv/uv.bundle.js"></script>
+    <script src="./uv/uv.config.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- <script src="./stomp/bootstrapper.js"></script>
   <script src="./dip/dip.config.js"></script>
   <script src="./dip/dip.client.js"></script>
   <script src="./osana/client.js"></script>
   <script src="./osana/config.js"></script> TODO: Add this back slowly -->
-</body>
-<footer>
-  <a title="Donate if you want our site to stay up" href="https://weebnetwork.sellix.io">
-    <ion-icon name="logo-usd" size="small"></ion-icon>Donate
-  </a>
-  <a title="This is the only official discord server for Weeb Network" href="https://discord.gg/qGkKQqR4Vn">
-    <ion-icon name="logo-discord" size="small"></ion-icon>Discord
-  </a>
-  <a title="This is the official github org with all of the projects" href="https://github.com/weeb-network/">
-    <ion-icon name="logo-github" size="small"></ion-icon>Github
-  </a>
-  <a title="Licensing stuff" href="https://github.com/Weeb-Network/wc/blob/main/LICENSE.md">
-    <ion-icon name="document-text" size="small"></ion-icon>Licensing
-  </a>
-</footer>
-
+  </body>
+  <footer>
+    <ul>
+      <li>
+        <a
+          title="Donate if you want our site to stay up"
+          href="https://weebnetwork.sellix.io"
+          ><i class="fa-solid fa-circle-dollar-to-slot"></i>Donate</a
+        >
+      </li>
+      <li>
+        <a
+          title="This is the only official discord server for Weeb Network"
+          href="https://discord.gg/qGkKQqR4Vn"
+          ><i class="fa-brands fa-discord"></i>Discord</a
+        >
+      </li>
+      <li>
+        <a
+          title="This is the official github org with all of the projects"
+          href="https://github.com/weeb-network/"
+          ><i class="fa-brands fa-github"></i>Github</a
+        >
+      </li>
+      <li>
+        <a
+          title="Licensing stuff"
+          href="https://github.com/Weeb-Network/wc/blob/main/LICENSE.md"
+          ><ion-icon name="document-text" size="small"></ion-icon>Licensing</a
+        >
+      </li>
+    </ul>
+  </footer>
 </html>
