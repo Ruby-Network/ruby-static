@@ -1,0 +1,22 @@
+{
+    "name": "Weeb Central",
+    "short_name": "Weeb Central",
+    "description": "Weeb Central is a web search engine that help's end internet censorship Made by Hiro 🔥",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "black",
+    "theme_color": "black",
+    "lang": "en-US",
+    "icons": [
+        {
+            "src": "/img/logo.png",
+            "type": "image/svg+xml",
+            "sizes": "any"
+        },
+        {
+            "src": "/img/logo.png",
+            "type": "image/svg+xml",
+            "sizes": "300x300"
+        }
+    ]
+}

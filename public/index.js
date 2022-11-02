@@ -1,3 +1,19 @@
+if ('serviceWorker' in navigator) {
+  window.navigator.serviceWorker.register("/sw.js").then(registration =>  {
+    console.log("SW Registered!");
+    console.log(registration);
+
+  }).catch(error =>  {
+    console.log("SW Registration Failed!");
+    console.log(error);
+  })
+  }
+
+
+
+
+
+
 const form = document.querySelector("form");
 const input = document.querySelector("input");
 
