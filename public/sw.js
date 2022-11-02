@@ -3,8 +3,13 @@ self.addEventListener("install", e => {
         caches.open("static").then(cache => {
          return cache.addAll(["./index.html","./index.css","/settings/index.html","/settings/index.html","/games/index.html","/games/index.html"]);
         }));
+        self.skipWaiting();
 });
 
 self.addEventListener("fetch", e => {
-    console.log(`Intercepting fetch request for: ${e.request.url}`);
+    e.respondWith(
+        caches.match(e.request).then(Response => {
+            return Response || fetch(e.request);
+        })
+    );
 });
