@@ -1,54 +1,7 @@
-@import "https://fonts.googleapis.com/css?family=Shadows Into Light:300,400,500,600,700";
-
-#select-browser {
-  font-family: "Shadows Into Light";
-  background-color: #000;
+/*Utilitys*/
+P {
   color: #fff;
-  font-size: inherit;
-  cursor: pointer;
-  padding: 20px 20px;
-  transition: 0.5s;
-  box-sizing: border-box;
-  border: 0;
-  margin: 0;
-  border-radius: 10px;
-  text-align: center;
 }
-
-.logo {
-  text-align: left;
-  margin-block: 3px;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  margin-top: 75px;
-  text-align: center;
-}
-
-body {
-  background-image: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      color-stop(2%, rgba(0, 0, 0, 0.6)),
-      color-stop(98%, rgba(0, 0, 0, 0.6))),
-    url("https://uploads-ssl.webflow.com/62b89a760ac0e96394730919/62b89c634d120689b2392c39_background.jpg");
-  background-image: linear-gradient(180deg,
-      rgba(0, 0, 0, 0.6) 2%,
-      rgba(0, 0, 0, 0.6) 98%),
-    url("https://uploads-ssl.webflow.com/62b89a760ac0e96394730919/62b89c634d120689b2392c39_background.jpg");
-  background-position: 0px 0px, 50% 50%;
-  background-size: auto, cover;
-  background-repeat: repeat, no-repeat;
-  background-attachment: scroll, fixed;
-  font-weight: 300;
-}
-
 a:link {
   text-decoration: none;
 }
@@ -58,102 +11,200 @@ a:visited {
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:active {
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+body {
+  background-color: #181c32;
+  margin: 0;
+}
+
+html {
+  padding: 0px;
+  margin: 0px;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 h1 {
-  font-family: "Shadows Into Light";
-  margin-top: 20px;
-  margin-bottom: 10px;
   font-size: 67px;
-  line-height: 44px;
   font-weight: 500;
   font-size: larger;
   padding: 0px 60px;
   color: #fff;
+  font-family: "Exo 2", sans-serif;
 }
 
-h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 32px;
-  line-height: 36px;
-  font-weight: 500;
+/*nav*/
+
+.icon {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+  display: flex;
+  margin-right: 5px;
 }
 
-h3 {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 500;
+.nav-menu {
+  color: white;
+  padding: 12px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h4 {
-  margin-top: 0px;
-  margin-bottom: 5px;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 500;
-  letter-spacing: 1px;
+nav {
+  margin-left: auto;
+  margin-right: 90px;
+  position: relative;
 }
 
-h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+/*header*/
 
-p {
-  margin-bottom: 10px;
-  line-height: 24px;
-  font-weight: 300;
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  -webkit-transform: translate(0%, -50%);
-  -ms-transform: translate(0%, -50%);
-  transform: translate(0%, -50%);
-  color: #fff;
-  text-align: center;
+.logo {
+  display: flex;
+  font-size: 25px;
+  text-align: left;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .hero-heading {
-  margin-top: 0px;
   color: #fff;
   font-size: 80px;
   line-height: 85px;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
-  font-family: "Shadows Into Light";
+  display: inline-flex;
+  border: 2px solid;
+  border-radius: 15px;
+  background-color: #292c3a;
+  border-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
 .hero-subtitle {
-  text-align: center;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 1px;
+  color: #fff;
+  font-size: 80px;
+  line-height: 85px;
+  font-weight: 700;
   text-transform: uppercase;
-  font-family: "Shadows Into Light";
+  display: inline-flex;
+  border: 2px solid;
+  border-radius: 15px;
+  background-color: #292c3a;
+  border-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-input {
+header {
+  height: 40px;
+  margin-left: 15px;
+  padding: 10px 60px 0;
+  margin-bottom: 30px;
+  border: 2px solid;
+  border-radius: 15px;
+  background-color: #292c3a;
+  align-items: center;
+  display: flex;
+  font-family: "Exo 2", sans-serif;
+  margin-top: 10px;
+}
+
+header ul {
+  display: flex;
+  /* vertically align the content in the header */
+  align-items: center;
+  /* set a fixed height */
+  height: 40px;
+  margin-left: 15px;
+  padding: 0 60px;
+  margin-bottom: 30px;
+  list-style-type: none;
+  justify-content: center;
+}
+
+/*footer*/
+footer {
+  margin-top: auto;
+  width: 93%;
+  height: 80px;
+  display: inline-flex;
+  left: 0;
+  bottom: 0;
+  font-family: "Exo 2", sans-serif;
+}
+
+footer a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+footer ul {
+  width: 93%;
+  height: 80px;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  list-style-type: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+footer i {
+  margin-right: 5px;
+}
+
+/*settings container thing*/
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-top: 75px;
+}
+
+.settings-div {
+  font-family: "Exo 2", sans-serif;
+  background: #45454521;
+  box-sizing: border-box;
+  width: 300px;
+  height: 246px;
+  padding: 30px;
+  border: 2px solid rgb(0 0 0 / 64%);
+  border-radius: 9px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #292c3a;
+  margin-bottom: 30px;
+}
+
+/*settings stuff*/
+#select-browser {
   font-family: "Shadows Into Light";
   background-color: #000;
   color: #fff;
   font-size: inherit;
+  cursor: pointer;
   padding: 20px 20px;
   transition: 0.5s;
   box-sizing: border-box;
@@ -171,8 +222,7 @@ input {
   margin-top: 50px;
 }
 
-.button {
-  font-family: "Shadows Into Light";
+button {
   background-color: #000;
   color: #fff;
   font-size: inherit;
@@ -184,30 +234,9 @@ input {
   margin: 0;
   border-radius: 10px;
   text-align: center;
-}
-
-.header {
-  display: flex;
-  /* vertically align the content in the header */
-  align-items: center;
-  /* set a fixed height */
-  height: 40px;
-  margin-left: 15px;
-  padding: 0px 60px;
-  margin-bottom: 30px;
-}
-
-nav {
-  margin-left: auto;
-  margin-right: 90px;
-}
-
-p {
-  color: #ffffff;
 }
 
 .select-proxy {
-  font-family: "Shadows Into Light";
   background-color: #000;
   color: #fff;
   font-size: inherit;
@@ -220,85 +249,18 @@ p {
   border-radius: 10px;
   text-align: center;
 }
-
-::-webkit-scrollbar {
-  width: 13px;
-}
-
-::-webkit-scrollbar-track {
-  background: #080080;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #000000;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-  border-radius: 4px;
-}
-
-.settings-div {
-  background: #45454521;
+input {
+  background-color: #000;
+  color: #fff;
+  font-size: inherit;
+  padding: 20px 20px;
+  transition: 0.5s;
   box-sizing: border-box;
-  width: 300px;
-  height: 246px;
-  padding: 30px;
-  border: 2px solid rgb(0 0 0 / 64%);
-  border-radius: 9px;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  background-color: #333333;
-}
-
-.nav-menu {
+  border: 0;
+  margin: 0;
+  border-radius: 10px;
   text-align: center;
-  color: white;
-  padding: 12px;
-  align-items: center;
 }
-
-.nav-menu .material-icons {
-  margin-right: 12px;
-  vertical-align: middle;
-}
-
-.nav-link {
-  padding: 26px 13px;
-  color: white;
-  font-size: 13px;
-  line-height: 18px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.nav-link:hover {
-  color: #fff;
-}
-
-.nav-link.w--current {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav-link.logo {
-  padding-top: 23px;
-  padding-bottom: 23px;
-  font-family: "Roboto Slab", sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-}
-
-.nav-bar {
-  background-color: transparent;
-  position: fixed;
-}
-
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -341,15 +303,15 @@ p {
   transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: #000000;
 }
 
-input:focus+.slider {
+input:focus + .slider {
   box-shadow: 0 0 1px black;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -362,4 +324,21 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181c32;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 10px;
 }

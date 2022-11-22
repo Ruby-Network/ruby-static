@@ -1,5 +1,10 @@
-function block(url) {
-    /*
+/**
+ * Tests to see if the request would be blocked due to cors rules
+ * @param {String} url The url that is being tested
+ * @return {Boolean} The result
+ */
+export default async url => {
+    return false;
     try {
         const controller = new AbortController();
         const signal = controller.signal;
@@ -7,14 +12,11 @@ function block(url) {
         await fetch(url, { signal });
 
         // Don't actually send the request.
-        controller.abort()
+        controller.abort();
+
+        return true;
     } catch (err) {
-        if (err.name !== 'AbortError')
+        if (err.name !== "AbortError")
             return false;
     }
-    */
-
-    return false;
-}
-
-export { block };
+};

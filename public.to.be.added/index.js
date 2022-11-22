@@ -10,29 +10,6 @@ loadSW("uv-sw.js", {
   scope: __uv$config.prefix,
 });
 
-const Stomp = new StompBoot({
-  bare_server: "/bare/",
-  directory: "/stomp/",
-  loglevel: StompBoot.LOG_ERROR,
-  codec: StompBoot.CODEC_XOR,
-});
-
-loadSW("dip-sw.js", {
-  scope: __DIP.config.prefix,
-});
-
-// loadSW("osana/sw.js", {
-//   scope: __osana$config.prefix,
-//   updateViaCache: "none",
-// });
-
-loadSW("aero-sw.js", {
-  scope: "/go/",
-  // Don't cache http requests
-  updateViaCache: "none",
-  type: "module",
-});
-
 input.addEventListener("keydown", (event) => {
   if (event.key !== "Enter") return;
   // event.preventDefault();
@@ -75,13 +52,4 @@ if (localStorage.getItem("type")) {
       "#select-proxy option[value=" + localStorage.getItem("type") + "]"
     )
     .setAttribute("selected", "");
-}
-
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
 }
