@@ -26,7 +26,11 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Ubuntu&display=swap");
     </style>
-    <script src="../js/index.js"></script>
+    <script src="/uv/uv.bundle.js" defer></script>
+    <script src="/uv/uv.config.js" defer></script>
+    <script src="./register-sw.js" defer></script>
+    <script src="./search.js" defer></script>
+    <script src="./index.js" defer></script>
   </head>
 
   <body>
@@ -107,10 +111,11 @@
     </header>
     <div class="hero-container w-container">
       <center><h1 class="hero-heading">WEEB CENTRAL</h1></center>
-      <form action="submit" id="form">
+      <form action="submit" id="uv-form">
+	<input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
         <div class="search">
           <input
-            id="omnibox input"
+            id="omnibox uv-address"
             type="text"
             class="input__box"
             placeholder="Privately Search the web..."
