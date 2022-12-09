@@ -23,3 +23,7 @@ function isUrl(val = "") {
     (val.includes(".") && val.substr(0, 1) !== " ")
   );
 }
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js");
+}
