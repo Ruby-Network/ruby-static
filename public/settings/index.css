@@ -1,19 +1,13 @@
-/*Utilitys*/
-P {
+/* Utilitys */
+p {
   color: #fff;
 }
-a:link {
+
+a {
   text-decoration: none;
 }
 
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
+a:hover,
 a:active {
   text-decoration: underline;
 }
@@ -24,8 +18,8 @@ body {
 }
 
 html {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   overflow-y: scroll;
   width: 100%;
 }
@@ -34,13 +28,12 @@ h1 {
   font-size: 67px;
   font-weight: 500;
   font-size: larger;
-  padding: 0px 60px;
+  padding: 0 60px;
   color: #fff;
   font-family: "Exo 2", sans-serif;
 }
 
-/*nav*/
-
+/* nav */
 .icon {
   width: 25px;
   height: 25px;
@@ -64,8 +57,7 @@ nav {
   position: relative;
 }
 
-/*header*/
-
+/* header */
 .logo {
   display: flex;
   font-size: 25px;
@@ -74,20 +66,7 @@ nav {
   cursor: pointer;
 }
 
-.hero-heading {
-  color: #fff;
-  font-size: 80px;
-  line-height: 85px;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: inline-flex;
-  border: 2px solid;
-  border-radius: 15px;
-  background-color: #292c3a;
-  border-color: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+.hero-heading,
 .hero-subtitle {
   color: #fff;
   font-size: 80px;
@@ -99,10 +78,13 @@ nav {
   border-radius: 15px;
   background-color: #292c3a;
   border-color: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px;
+  font-family: "Exo 2", sans-serif;
+}
+
+.hero-subtitle {
+  padding: 0 20px;
+  font-family: "Exo 2", sans-serif;
 }
 
 header {
@@ -132,12 +114,12 @@ header ul {
   justify-content: center;
 }
 
-/*footer*/
+/* footer */
 footer {
   margin-top: auto;
   width: 93%;
   height: 80px;
-  display: inline-flex;
+  display: flex;
   left: 0;
   bottom: 0;
   font-family: "Exo 2", sans-serif;
@@ -152,6 +134,10 @@ footer a {
   margin-right: 5px;
 }
 
+footer a:hover {
+  text-decoration: underline;
+}
+
 footer ul {
   width: 93%;
   height: 80px;
@@ -161,14 +147,11 @@ footer ul {
   list-style-type: none;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
 footer i {
   margin-right: 5px;
 }
 
-/*settings container thing*/
+/* settings container thing */
 .container {
   display: flex;
   flex-direction: row;
@@ -181,12 +164,11 @@ footer i {
 
 .settings-div {
   font-family: "Exo 2", sans-serif;
-  background: #45454521;
   box-sizing: border-box;
   width: 300px;
   height: 246px;
   padding: 30px;
-  border: 2px solid rgb(0 0 0 / 64%);
+  border: 2px solid black;
   border-radius: 9px;
   margin-top: 20px;
   display: flex;
@@ -198,7 +180,7 @@ footer i {
   margin-bottom: 30px;
 }
 
-/*settings stuff*/
+/* settings stuff */
 #select-browser {
   font-family: "Shadows Into Light";
   background-color: #000;
@@ -222,7 +204,9 @@ footer i {
   margin-top: 50px;
 }
 
-button {
+button,
+.select-proxy,
+input {
   background-color: #000;
   color: #fff;
   font-size: inherit;
@@ -236,31 +220,6 @@ button {
   text-align: center;
 }
 
-.select-proxy {
-  background-color: #000;
-  color: #fff;
-  font-size: inherit;
-  cursor: pointer;
-  padding: 20px 20px;
-  transition: 0.5s;
-  box-sizing: border-box;
-  border: 0;
-  margin: 0;
-  border-radius: 10px;
-  text-align: center;
-}
-input {
-  background-color: #000;
-  color: #fff;
-  font-size: inherit;
-  padding: 20px 20px;
-  transition: 0.5s;
-  box-sizing: border-box;
-  border: 0;
-  margin: 0;
-  border-radius: 10px;
-  text-align: center;
-}
 /* The switch - the box around the slider */
 .switch {
   position: relative;
