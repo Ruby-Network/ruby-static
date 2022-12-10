@@ -28,9 +28,9 @@
     </style>
     <script src="/uv/uv.bundle.js" defer></script>
     <script src="/uv/uv.config.js" defer></script>
+    <script src="./index.js" defer></script>
     <script src="./register-sw.js" defer></script>
     <script src="./search.js" defer></script>
-    <script src="./index.js" defer></script>
   </head>
 
   <body>
@@ -111,24 +111,13 @@
     </header>
     <div class="hero-container w-container">
       <center><h1 class="hero-heading">WEEB CENTRAL</h1></center>
-      <form id="uv-form">
-	<input
-        id="uv-search-engine"
-        value="https://www.google.com/search?q=%s"
-        type="hidden"
-      />
+      <form action="submit" id="uv-form">
         <div class="search">
-          <input
-            id="omnibox uv-address"
-            type="text"
-            class="input__box"
-            placeholder="Privately Search the web..."
-          />
+	  <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
+          <input id="uv-address" type="text" class="input__box" placeholder="Privately Search the web..." />
         </div>
-
-        <script src="./uv/uv.bundle.js"></script>
-        <script src="./uv/uv.config.js"></script>
-
+	<p id="uv-error"></p>
+      <pre id="uv-error-code"></pre>
         <footer>
           <ul>
             <li>
@@ -171,6 +160,6 @@
           </ul>
         </footer>
       </form>
-    </div>
+    </div> 
   </body>
 </html>
