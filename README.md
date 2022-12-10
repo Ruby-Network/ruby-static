@@ -1,1 +1,3 @@
-# Static Files For [Weeb Central]('https://github.com/weeb-network/wc')
+# Static Files For Weeb Central
+
+- You Can View the Actual Repository [here](https://github.com/weeb-network/wc)
