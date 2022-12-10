@@ -35,8 +35,6 @@ form.addEventListener("submit", async (event) => {
   location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
 
-/*search Suggestion*/
-
 const searchInput = document.getElementById("uv-form");
 const searchForm = document.getElementById("uv-address");
 
@@ -55,6 +53,22 @@ searchInput.addEventListener("input", async (event) => {
 
   // Update the search form with the suggestions
   searchForm.innerHTML = suggestions
-    .map((suggestion) => `<option value="${suggestion}">`)
+    .map((suggestion) => `<option value="${suggestion}">${suggestion}</option>`)
     .join("");
+
+  // If there are no suggestions, show a message
+  if (suggestions.length === 0) {
+    searchForm.innerHTML = `<option>No suggestions</option>`;
+  }
+
+  // Show the search form
+  searchForm.style.display = "block";
+});
+
+// Listen for a click outside of the search form
+document.addEventListener("click", (event) => {
+  // If the click was outside the search form, hide it
+  if (event.target !== searchForm) {
+    searchForm.style.display = "none";
+  }
 });

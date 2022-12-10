@@ -10,10 +10,6 @@
       content="Weeb Central is a web search engine that help's end internet censorship
     Made by Hiro 🔥#0001"
     />
-    <meta
-      name="keywords"
-      content="Weeb-Central, Proxy, Proxies, Discord, custom, weeb, central, "
-    />
     <link rel="stylesheet" href="index.css" />
     <link
       rel="apple-touch-icon"
@@ -29,7 +25,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <script src="index.js"></script>
   </head>
 
   <body>
@@ -108,122 +103,58 @@
         </ul>
       </nav>
     </header>
-    <center><div class="hero-subtitle">SETTINGS</div></center>
+    <center><div class="hero-subtitle">Projects</div></center>
     <center><h1 class="hero-heading">WEEB CENTRAL</h1></center>
 
-    <div class="container">
-      <div class="settings-div">
-        <p>Tab Title</p>
-        <p>Change the title of the webpage</p>
+    <center>
+      <div class="container">
+        <p>Weeb Flix</p>
 
-        <input
-          value="Weeb Central"
-          class="title"
-          id="title"
-          placeholder="No Title"
-          oninput="document.title = this.value || 'Weeb-Central'; set('title', this.value)"
-        />
+        <p>A anime site made by ??? (Coming Soon)</p>
+
+        <p>ETA by the end of 2023</p>
       </div>
-      <div class="settings-div">
-        <p>Tab Icon</p>
-        <p>Change the icon of the webpage</p>
-        <input
-          value="https://weeb-central.icu/index.svg"
-          class="title"
-          id="title"
-          placeholder="Favicon"
-          onchange="faviconChange(this.value)"
-        />
-      </div>
-      <div class="settings-div">
-        <p>about:blank</p>
+    </center>
+    <footer>
+      <ul>
+        <li>
+          <a
+            title="Donate if you want our site to stay up"
+            href="https://weebnetwork.sellix.io"
+          >
+            <i class="fa-solid fa-dollar-sign"></i>
+            Donate</a
+          >
+        </li>
+        <li>
+          <a
+            title="This is the only official discord server for Weeb Network"
+            href="https://discord.gg/qGkKQqR4Vn"
+          >
+            <i class="fa-brands fa-discord"></i>
+            Discord</a
+          >
+        </li>
 
-        <p>Opens the page as about:blank</p>
-
-        <button onclick="AboutBlankCloak()" class="button">About:Blank</button>
-      </div>
-      <div class="settings-div">
-        <p>Select Browser (Dosen't work)</p>
-
-        <p>Choose what browser you want to use</p>
-        <select
-          class="select-browser"
-          id="select-browser"
-          onchange="browserChange()"
-        >
-          <option value="google">Google</option>
-          <option value="brave">Brave</option>
-          <option value="qwant">Qwant</option>
-          <option value="duckduckgo">DuckDuckGo</option>
-          <option value="yahoo">Yahoo</option>
-        </select>
-      </div>
-      <div class="settings-div">
-        <p>Select Proxy (Need's Testing)</p>
-        <p>Choose what proxy you want to use</p>
-
-        <select class="select-proxy" id="select-proxy" onchange="setProxy();">
-          <option value="Ultraviolet">Ultraviolet</option>
-          <option value="Aero">Aero</option>
-          <option value="Stomp">Stomp</option>
-          <option value="DIP">Dip</option>
-          <option value="Osana">Osana</option>
-        </select>
-      </div>
-
-      <div class="settings-div">
-        <p>Search Engine</p>
-        <p>Change Your Search Engine</p>
-      </div>
-
-      <div class="settings-div">
-        <p>Support Us!</p>
-        <p>Donate to keep our services up</p>
-
-        <a href="https://weebnetwork.sellix.io"> <button>Donate</button> </a>
-      </div>
-
-      <footer>
-        <ul>
-          <li>
-            <a
-              title="Donate if you want our site to stay up"
-              href="https://weebnetwork.sellix.io"
-            >
-              <i class="fa-solid fa-dollar-sign"></i>
-              Donate</a
-            >
-          </li>
-          <li>
-            <a
-              title="This is the only official discord server for Weeb Network"
-              href="https://discord.gg/qGkKQqR4Vn"
-            >
-              <i class="fa-brands fa-discord"></i>
-              Discord</a
-            >
-          </li>
-
-          <li>
-            <a
-              title="The official github for WeebCentral"
-              href="https://github.com/Weeb-Network/wc"
-            >
-              <i class="fa-brands fa-github"></i>
-              Github
-            </a>
-          </li>
-          <li>
-            <a
-              title="Licensing stuff"
-              href="https://github.com/Weeb-Network/wc/blob/main/LICENSE.md"
-            >
-              <i class="fa-solid fa-scroll"></i>
-              Licensing
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+        <li>
+          <a
+            title="The official github for WeebCentral"
+            href="https://github.com/Weeb-Network/wc"
+          >
+            <i class="fa-brands fa-github"></i>
+            Github
+          </a>
+        </li>
+        <li>
+          <a
+            title="Licensing stuff"
+            href="https://github.com/Weeb-Network/wc/blob/main/LICENSE.md"
+          >
+            <i class="fa-solid fa-scroll"></i>
+            Licensing
+          </a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
