@@ -26,13 +26,13 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Ubuntu&display=swap");
     </style>
-    <script src="../js/index.js"></script>
     <link rel="manifest" href="/manifest.json" />
     <script src="/uv/uv.bundle.js" defer></script>
     <script src="/uv/uv.config.js" defer></script>
-    <script src="./index.js" defer></script>
-    <script src="./register-sw.js" defer></script>
-    <script src="./search.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/register-sw.js" defer></script>
+    <script src="./js/search.js" defer></script>
+    <script src="./js/suggestions.js" defer></script>
   </head>
 
   <body>
@@ -127,6 +127,13 @@
             placeholder="Privately Search the web..."
           />
         </div>
+      </form>
+      <!-- HTML to add a container element for the suggestions -->
+      <div id="uv-suggestions" class="dnone">
+  <!-- This element will be updated with the suggestions by the JavaScript code -->
+      <ul id="sDD"></ul>
+    </div>
+    <iframe title="uv-iframe" id="uv-iframe" class="dnone"></iframe>
         <p id="uv-error"></p>
         <pre id="uv-error-code"></pre>
         <footer>
