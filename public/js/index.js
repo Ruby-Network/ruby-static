@@ -72,3 +72,27 @@ if (proxytype === "DIP") {
     return a;
   }
 }
+if (proxytype === "Osana") {
+  document.getElementById("uv-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    worker().then(event=>{
+      var val = document.querySelector('.dipinput').value;
+      let se = document.getElementById('uv-search-engine').value;
+      // remove %s from the search engine url
+      se = se.replace('%s', '');
+      // add the search query to the end of the search engine url
+      se = se + val;
+      console.log(se);
+      iframe.classList.remove("dnone");
+      iframe.src = __osana$config.prefix + __osana$config.codec.encode(se);
+      if (val.includes('https://') || val.includes('http://')) {
+        iframe.classList.remove("dnone");
+      iframe.src = __osana$config.prefix + __osana$config.codec.encode(val)
+      }
+    })
+  });
+  async function worker() {
+    var a = await navigator.serviceWorker.register('/dip-sw.js', {scope: '/service/'});
+    return a;
+  }
+}
