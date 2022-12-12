@@ -48,7 +48,7 @@ searchInput.addEventListener("input", async (event) => {
         // Get the clicked suggestion
         const suggestion = event.target.textContent;
         searchForm.value = suggestion;
-        // Set the search input value to the clicked suggestion
+        // hit enter on the form to submit the search
       }
       );
       if (suggestions.length === 0) {

@@ -23,13 +23,14 @@
     <link
       rel="icon"
       type="image/apple-touch-icon.png"
+      id="tabIcon"
       href="/img/favicon.ico"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <script src="index.js"></script>
+    <script src="../js/settings.js" defer></script>
   </head>
 
   <body>
@@ -115,13 +116,14 @@
       <div class="settings-div">
         <p>Tab Title</p>
         <p>Change the title of the webpage</p>
-
+        <!-- Call titleValue(); -->
         <input
           value="Weeb Central"
           class="title"
+          type="text"
           id="title"
           placeholder="No Title"
-          oninput="document.title = this.value || 'Weeb-Central'; set('title', this.value)"
+          oninput="titleChanger(this.value)"
         />
       </div>
       <div class="settings-div">
@@ -130,9 +132,9 @@
         <input
           value="https://weeb-central.icu/index.svg"
           class="title"
-          id="title"
+          id="tabIconChanger"
           placeholder="Favicon"
-          onchange="faviconChange(this.value)"
+          onchange="tabIconChanger(this.value)"
         />
       </div>
       <div class="settings-div">
@@ -143,37 +145,48 @@
         <button onclick="AboutBlankCloak()" class="button">About:Blank</button>
       </div>
       <div class="settings-div">
-        <p>Select Browser (Dosen't work)</p>
+        <p>Change Search Engine</p>
 
-        <p>Choose what browser you want to use</p>
+        <p>Choose between a few search engines</p>
         <select
           class="select-browser"
           id="select-browser"
-          onchange="browserChange()"
+          onchange="searchEngineChanger(this.value);"
         >
           <option value="google">Google</option>
           <option value="brave">Brave</option>
           <option value="qwant">Qwant</option>
           <option value="duckduckgo">DuckDuckGo</option>
           <option value="yahoo">Yahoo</option>
+          <option value="bing">Bing</option>
         </select>
       </div>
       <div class="settings-div">
-        <p>Select Proxy (Need's Testing)</p>
-        <p>Choose what proxy you want to use</p>
+        <p>Select Proxy</p>
+        <p>Choose what proxy backend you want to use</p>
 
-        <select class="select-proxy" id="select-proxy" onchange="setProxy();">
+        <select class="select-proxy" id="select-proxy" onchange="proxyChanger(this.value);">
+          <!-- <option value="none">Coming Soon!</option> -->
           <option value="Ultraviolet">Ultraviolet</option>
+          <option value="DIP">Dip</option>
+          <!--FOR LATER: <option value="Aero">Aero</option>
+          <option value="Stomp">Stomp</option> -->
+          <!--FOR LATER: <option value="Osana">Osana</option> -->
+        </select>
+      </div>
+
+      <div class="settings-div">
+        <p>Backgrounds/Themes</p>
+        <p>Themes/Backgrounds (Not Implemented yet!)</p>
+
+        <select class="select-proxy">
+          <option>Coming Soon!</option>
+          <!-- <option value="Ultraviolet">Ultraviolet</option>
           <option value="Aero">Aero</option>
           <option value="Stomp">Stomp</option>
           <option value="DIP">Dip</option>
-          <option value="Osana">Osana</option>
+          <option value="Osana">Osana</option> -->
         </select>
-      </div>
-
-      <div class="settings-div">
-        <p>Search Engine</p>
-        <p>Change Your Search Engine</p>
       </div>
 
       <div class="settings-div">

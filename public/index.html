@@ -17,6 +17,7 @@
     <link
       rel="icon"
       type="image/apple-touch-icon.png"
+      id="tabIcon"
       href="/img/favicon.ico"
     />
     <link
@@ -27,12 +28,15 @@
       @import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Ubuntu&display=swap");
     </style>
     <link rel="manifest" href="/manifest.json" />
-    <script src="/uv/uv.bundle.js" defer></script>
-    <script src="/uv/uv.config.js" defer></script>
-    <script src="./js/index.js" defer></script>
-    <script src="./js/register-sw.js" defer></script>
+    <script id="switch" src="/uv/uv.bundle.js" defer></script>
+    <script id="switch1" src="/uv/uv.config.js" defer></script>
+    <script id="switch2" src="./js/register-sw.js" defer></script>
+    <script id="switch3" src="./js/index.js" defer></script>
+    <script src="/dip/dip.config.js" defer></script>
+    <script src="/dip/dip.page.js" defer></script>
     <script src="./js/search.js" defer></script>
     <script src="./js/suggestions.js" defer></script>
+    <script src="./js/settings.js" defer></script>
   </head>
 
   <body>
@@ -113,7 +117,7 @@
     </header>
     <div class="hero-container w-container">
       <center><h1 class="hero-heading">WEEB CENTRAL</h1></center>
-      <form action="submit" id="uv-form">
+      <form class="dipform" action="submit" id="uv-form">
         <div class="search">
           <input
             id="uv-search-engine"
@@ -123,7 +127,7 @@
           <input
             id="uv-address"
             type="text"
-            class="input__box"
+            class="dipinput"
             placeholder="Privately Search the web..."
           />
         </div>
@@ -133,7 +137,7 @@
   <!-- This element will be updated with the suggestions by the JavaScript code -->
       <ul id="sDD"></ul>
     </div>
-    <iframe title="uv-iframe" id="uv-iframe" class="dnone"></iframe>
+      <iframe title="uv-iframe" id="uv-iframe" class="dnone"></iframe>
         <p id="uv-error"></p>
         <pre id="uv-error-code"></pre>
         <footer>
@@ -142,6 +146,8 @@
               <a
                 title="Donate if you want our site to stay up"
                 href="https://weebnetwork.sellix.io"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <i class="fa-solid fa-dollar-sign"></i>
                 Donate</a
@@ -149,8 +155,10 @@
             </li>
             <li>
               <a
-                title="This is the only official discord server for Weeb Network"
+                title="This is the official discord server for Weeb Network"
                 href="https://discord.gg/qGkKQqR4Vn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <i class="fa-brands fa-discord"></i>
                 Discord</a
@@ -161,6 +169,8 @@
               <a
                 title="The official github for WeebCentral"
                 href="https://github.com/Weeb-Network/wc"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <i class="fa-brands fa-github"></i>
                 Github
@@ -170,6 +180,8 @@
               <a
                 title="Licensing stuff"
                 href="https://github.com/Weeb-Network/wc/blob/main/LICENSE.md"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <i class="fa-solid fa-scroll"></i>
                 Licensing
