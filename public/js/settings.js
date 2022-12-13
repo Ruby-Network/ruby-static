@@ -63,19 +63,20 @@ function titleChanger(value) {
   setLocalStorage("title", value);
 }
 function titleSet() {
-  document.title = getLocalStorage("title");
+  let title = getLocalStorage("title");
   // set default value
-  if (document.title === null || document.title === "" || document.title === "null" || document.title === "undefined" || document.title === undefined) {
+  if (title === null || title === "" || title === "null" || title === "undefined" || title === undefined) {
     document.title = "Weeb Central";
+    titleChanger("Weeb Central");
   }
 }
 function titleValue() {
   //document.getElementById("title").value = getLocalStorage("title");
   //document.getElementById("title").value = "test";
   let l = document.getElementById("title");
-  l.value = getLocalStorage("title");
+  let ll = getLocalStorage("title");
   // set default value
-  if (l.value === null || l.value === "" || l.value === "null" || l.value === "undefined" || l.value === undefined) {
+  if (ll === null || ll === "" || ll === "null" || ll === "undefined" || ll === undefined) {
     l.value = "Weeb Central";
     titleChanger("Weeb Central");
   }
@@ -92,9 +93,14 @@ function tabIconChanger(value) {
 }
 function tabIconSet() {
   document.getElementById("tabIcon").href = getLocalStorage("tabIcon");
+  let tabIcon = getLocalStorage("tabIcon");
   // set default value
-  if (document.getElementById("tabIcon").href === null || document.getElementById("tabIcon").href === "" || document.getElementById("tabIcon").href === "null" || document.getElementById("tabIcon").href === "undefined" || document.getElementById("tabIcon").href === undefined) {
-    document.getElementById("tabIcon").href = "/img/favicon.ico";
+  if (tabIcon === null || tabIcon === "" || tabIcon === "null" || tabIcon === "undefined" || tabIcon === undefined) {
+    // get root url
+    let url = window.location.protocol + "//" + window.location.host;
+    //console.log(url);
+    document.getElementById("tabIcon").href = `${url}/img/favicon.ico`;
+    tabIconChanger(`${url}/img/favicon.ico`);
   }
 }
 async function tabIconValue() {
@@ -162,6 +168,11 @@ function indexSearch () {
   if (searchEngine === 'bing') {
     search.value = "https://www.bing.com/search?q=%s";
   }
+  if (searchEngine === null || searchEngine === "" || searchEngine === "null" || searchEngine === "undefined" || searchEngine === undefined) {
+    search.value = "https://www.google.com/search?q=%s";
+    setLocalStorage("searchEngine", "google");
+    window.location.reload();
+  }
 }
 if (window.location.pathname === "/settings" || window.location.pathname === "/settings/") {
   searchEngineValue();
@@ -182,7 +193,7 @@ function proxySet() {
   // document.getElementById("select-proxy").value = proxy;
   // set default value
   if (proxy === null || proxy === "" || proxy === "null" || proxy === "undefined" || proxy === undefined) {
-    document.getElementById("select-proxy").value = "none";
+    // document.getElementById("select-proxy").value = "Ultraviolet";
     proxyChanger("Ultraviolet");
   }
 }

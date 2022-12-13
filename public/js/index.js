@@ -1,12 +1,3 @@
-"use strict";
-/**
- * @type {HTMLFormElement}
- */
-const form = document.getElementById("uv-form");
-/**
- * @type {HTMLInputElement}
- */
-const address = document.getElementById("uv-address");
 /**
  * @type {HTMLInputElement}
  */
@@ -22,30 +13,22 @@ const errorCode = document.getElementById("uv-error-code");
 const iframe = document.getElementById("uv-iframe");
 let proxytype = localStorage.getItem("proxy");
 if (proxytype === "Ultraviolet") {
-  form.addEventListener("submit", async (event) => {
+  document.getElementById("uv-form").addEventListener("submit", async (event) => {
     event.preventDefault();
-
-  try {
-    await registerSW();
-  } catch (err) {
-    error.textContent = "Failed to register service worker.";
-    errorCode.textContent = err.toString();
-    throw err;
-  }
-
-  const url = search(address.value, searchEngine.value);
-  // window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
-  // open in iframe
-  // remove the display none class
-  iframe.classList.remove("dnone");
-  iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
-});
-// Add PWA support
-async function registerSW() {
-  if ("serviceWorker" in navigator) {
-    await navigator.serviceWorker.register("/sw.js");
-  }
-}
+    const address = document.getElementById("uv-address");
+    try {
+      await registerSW();
+      console.log("Registered SW");
+    } catch (err) {
+      error.textContent = "Failed to register service worker.";
+      errorCode.textContent = err.toString();
+      throw err;
+    }
+  
+    const url = search(address.value, searchEngine.value);
+    iframe.classList.remove("dnone");
+    iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
+  });
 }
 if (proxytype === "DIP") {
   document.querySelector('.dipform').addEventListener('submit', async (event) => {

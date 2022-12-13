@@ -254,10 +254,21 @@ footer i {
   left: 0;
   right: 0;
   bottom: 0;
+  /* Remove gap between iframe and body */
+  margin: 0;
   background-color: #292c3a;
   /* Make it cover the whole page */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   /* Position on top of everything */
-  z-index: 999999;
+  z-index: 1;
+  border: none;
+  overflow: hidden;
+  padding: 0;
+  /* Remove custom scrollbar */
+  overflow: hidden;
+  /* Hide scrollbar */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
 }
