@@ -1,1 +1,0 @@
-WebAssembly.Module.imports = null;
