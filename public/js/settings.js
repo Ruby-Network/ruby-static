@@ -64,6 +64,7 @@ function titleChanger(value) {
 }
 function titleSet() {
   let title = getLocalStorage("title");
+	document.title = title	
   // set default value
   if (title === null || title === "" || title === "null" || title === "undefined" || title === undefined) {
     document.title = "Weeb Central";
