@@ -1,4 +1,4 @@
-var cacheName = "weeb central";
+var cacheName = "weeb-central";
 var filesToCache = ["/sw.js"];
 
 self.addEventListener("install", function (e) {
