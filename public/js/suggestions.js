@@ -5,7 +5,6 @@ const searchForm = document.getElementById("uv-address");
 const suggestionsData = document.getElementById("sDD");
 const suggestionsContainer = document.getElementById("uv-suggestions");
 
-
 // Listen for changes to the search input
 searchInput.addEventListener("input", async (event) => {
   // Get the search query from the input field
@@ -28,14 +27,14 @@ searchInput.addEventListener("input", async (event) => {
 
       // Add the suggestions to the search form
       suggestions.forEach((suggestions) => {
-          // Create a new <li> element
-          const li = document.createElement("li", {id: "li-sDD"});
-          // Set the text content of the <li> element to the suggestion
-          li.textContent = suggestions;
-          // add value to the <li> element
-          li.setAttribute("data-value", suggestions);
-          // Append the <li> element to the suggestionsData element
-          suggestionsData.appendChild(li);
+        // Create a new <li> element
+        const li = document.createElement("li", { id: "li-sDD" });
+        // Set the text content of the <li> element to the suggestion
+        li.textContent = suggestions;
+        // add value to the <li> element
+        li.setAttribute("data-value", suggestions);
+        // Append the <li> element to the suggestionsData element
+        suggestionsData.appendChild(li);
       });
       // Allow a user click to edit the search query
       // remove the display none class
@@ -49,8 +48,7 @@ searchInput.addEventListener("input", async (event) => {
         const suggestion = event.target.textContent;
         searchForm.value = suggestion;
         // hit enter on the form to submit the search
-      }
-      );
+      });
       if (suggestions.length === 0) {
         suggestionsContainer.classList.remove("dflex");
         suggestionsContainer.classList.add("dnone");

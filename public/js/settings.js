@@ -64,9 +64,15 @@ function titleChanger(value) {
 }
 function titleSet() {
   let title = getLocalStorage("title");
-	document.title = title	
+  document.title = title;
   // set default value
-  if (title === null || title === "" || title === "null" || title === "undefined" || title === undefined) {
+  if (
+    title === null ||
+    title === "" ||
+    title === "null" ||
+    title === "undefined" ||
+    title === undefined
+  ) {
     document.title = "Weeb Central";
     titleChanger("Weeb Central");
   }
@@ -77,12 +83,21 @@ function titleValue() {
   let l = document.getElementById("title");
   let ll = getLocalStorage("title");
   // set default value
-  if (ll === null || ll === "" || ll === "null" || ll === "undefined" || ll === undefined) {
+  if (
+    ll === null ||
+    ll === "" ||
+    ll === "null" ||
+    ll === "undefined" ||
+    ll === undefined
+  ) {
     l.value = "Weeb Central";
     titleChanger("Weeb Central");
   }
 }
-if (window.location.pathname === "/settings" || window.location.pathname === "/settings/") {
+if (
+  window.location.pathname === "/settings" ||
+  window.location.pathname === "/settings/"
+) {
   titleValue();
 }
 titleSet();
@@ -96,7 +111,13 @@ function tabIconSet() {
   document.getElementById("tabIcon").href = getLocalStorage("tabIcon");
   let tabIcon = getLocalStorage("tabIcon");
   // set default value
-  if (tabIcon === null || tabIcon === "" || tabIcon === "null" || tabIcon === "undefined" || tabIcon === undefined) {
+  if (
+    tabIcon === null ||
+    tabIcon === "" ||
+    tabIcon === "null" ||
+    tabIcon === "undefined" ||
+    tabIcon === undefined
+  ) {
     // get root url
     let url = window.location.protocol + "//" + window.location.host;
     //console.log(url);
@@ -110,7 +131,13 @@ async function tabIconValue() {
   let l = document.getElementById("tabIconChanger");
   l.value = getLocalStorage("tabIcon");
   // set default value
-  if (l.value === null || l.value === "" || l.value === "null" || l.value === "undefined" || l.value === undefined) {
+  if (
+    l.value === null ||
+    l.value === "" ||
+    l.value === "null" ||
+    l.value === "undefined" ||
+    l.value === undefined
+  ) {
     // get root url
     let url = window.location.protocol + "//" + window.location.host;
     //console.log(url);
@@ -118,7 +145,10 @@ async function tabIconValue() {
     tabIconChanger(`${url}/img/favicon.ico`);
   }
 }
-if (window.location.pathname === "/settings" || window.location.pathname === "/settings/") {
+if (
+  window.location.pathname === "/settings" ||
+  window.location.pathname === "/settings/"
+) {
   tabIconValue();
 }
 tabIconSet();
@@ -132,7 +162,13 @@ function searchEngineSet() {
   let searchEngine = getLocalStorage("searchEngine");
   document.getElementById("select-browser").value = searchEngine;
   // set default value
-  if (searchEngine === null || searchEngine === "" || searchEngine === "null" || searchEngine === "undefined" || searchEngine === undefined) {
+  if (
+    searchEngine === null ||
+    searchEngine === "" ||
+    searchEngine === "null" ||
+    searchEngine === "undefined" ||
+    searchEngine === undefined
+  ) {
     document.getElementById("select-browser").value = "google";
     searchEngineChanger("google");
   }
@@ -142,40 +178,55 @@ function searchEngineValue() {
   //set option from select to local storage
   l.value = getLocalStorage("searchEngine");
   // set default value
-  if (l.value === null || l.value === "" || l.value === "null" || l.value === "undefined" || l.value === undefined) {
+  if (
+    l.value === null ||
+    l.value === "" ||
+    l.value === "null" ||
+    l.value === "undefined" ||
+    l.value === undefined
+  ) {
     l.value = "google";
     searchEngineChanger("google");
   }
 }
-function indexSearch () {
+function indexSearch() {
   let searchEngine = getLocalStorage("searchEngine");
   let search = document.getElementById("uv-search-engine");
   // search.value = getLocalStorage("searchEngine");
-  if (searchEngine === 'google') {
+  if (searchEngine === "google") {
     search.value = "https://www.google.com/search?q=%s";
   }
-  if (searchEngine === 'brave') {
+  if (searchEngine === "brave") {
     search.value = "https://search.brave.com/search?q=%s";
   }
-  if (searchEngine === 'qwant') {
+  if (searchEngine === "qwant") {
     search.value = "https://www.qwant.com/?q=%s";
   }
-  if (searchEngine === 'duckduckgo') {
+  if (searchEngine === "duckduckgo") {
     search.value = "https://duckduckgo.com/?q=%s";
   }
-  if (searchEngine === 'yahoo') {
+  if (searchEngine === "yahoo") {
     search.value = "https://search.yahoo.com/search?p=%s";
   }
-  if (searchEngine === 'bing') {
+  if (searchEngine === "bing") {
     search.value = "https://www.bing.com/search?q=%s";
   }
-  if (searchEngine === null || searchEngine === "" || searchEngine === "null" || searchEngine === "undefined" || searchEngine === undefined) {
+  if (
+    searchEngine === null ||
+    searchEngine === "" ||
+    searchEngine === "null" ||
+    searchEngine === "undefined" ||
+    searchEngine === undefined
+  ) {
     search.value = "https://www.google.com/search?q=%s";
     setLocalStorage("searchEngine", "google");
     window.location.reload();
   }
 }
-if (window.location.pathname === "/settings" || window.location.pathname === "/settings/") {
+if (
+  window.location.pathname === "/settings" ||
+  window.location.pathname === "/settings/"
+) {
   searchEngineValue();
   searchEngineSet();
 }
@@ -193,7 +244,13 @@ function proxySet() {
   let proxy = getLocalStorage("proxy");
   // document.getElementById("select-proxy").value = proxy;
   // set default value
-  if (proxy === null || proxy === "" || proxy === "null" || proxy === "undefined" || proxy === undefined) {
+  if (
+    proxy === null ||
+    proxy === "" ||
+    proxy === "null" ||
+    proxy === "undefined" ||
+    proxy === undefined
+  ) {
     // document.getElementById("select-proxy").value = "Ultraviolet";
     proxyChanger("Ultraviolet");
   }
@@ -203,12 +260,21 @@ function proxyValue() {
   //set option from select to local storage
   l.value = getLocalStorage("proxy");
   // set default value
-  if (l.value === null || l.value === "" || l.value === "null" || l.value === "undefined" || l.value === undefined) {
+  if (
+    l.value === null ||
+    l.value === "" ||
+    l.value === "null" ||
+    l.value === "undefined" ||
+    l.value === undefined
+  ) {
     l.value = "Ultraviolet";
     proxyChanger("Ultraviolet");
   }
 }
-if (window.location.pathname === "/settings" || window.location.pathname === "/settings/") {
+if (
+  window.location.pathname === "/settings" ||
+  window.location.pathname === "/settings/"
+) {
   proxyValue();
 }
 proxySet();
@@ -216,10 +282,11 @@ proxySet();
 //! local storage
 function setLocalStorage(key, value) {
   //set local storage
-  localStorage
-    .setItem
+  localStorage.setItem(
     //key, value
-    (key, value);
+    key,
+    value
+  );
 } //get local storage
 function getLocalStorage(key) {
   //get local storage
