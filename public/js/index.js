@@ -56,7 +56,7 @@ if (proxytype === "DIP") {
         console.log(se);
         iframe.classList.remove("dnone");
         iframe.src = window.__DIP.config.prefix + window.__DIP.encodeURL(se);
-        if (val.includes("HTTPS://") || val.includes("HTTP://")) {
+        if (val.includes("https://") || val.includes("http://")) {
           iframe.classList.remove("dnone");
           iframe.src = window.__DIP.config.prefix + window.__DIP.encodeURL(val);
         }
@@ -84,7 +84,7 @@ if (proxytype === "Osana") {
         console.log(se);
         iframe.classList.remove("dnone");
         iframe.src = __osana$config.prefix + __osana$config.codec.encode(se);
-        if (val.includes("HTTPS://") || val.includes("HTTP://")) {
+        if (val.includes("https://") || val.includes("http://")) {
           iframe.classList.remove("dnone");
           iframe.src = __osana$config.prefix + __osana$config.codec.encode(val);
         }
