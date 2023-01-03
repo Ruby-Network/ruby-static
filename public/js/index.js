@@ -29,8 +29,9 @@ if (proxytype === "Ultraviolet") {
       }
 
       const url = search(address.value, searchEngine.value);
+      const addr = address.value
       const toup = url.toUpperCase();
-      if (url === "ROBLOX" || url === "ROBLOX.COM" || url === "WWW.ROBLOX.COM" || url === "ROBLOX.COM/" || url === "WWW.ROBLOX.COM/" || url === "HTTPS://ROBLOX.COM" ||url === "HTTPS://WWW.ROBLOX.COM" || url === "HTTPS://ROBLOX.COM/" || url === "HTTPS://WWW.ROBLOX.COM/" || url === "HTTP://ROBLOX.COM" || url === "HTTP://WWW.ROBLOX.COM" || url === "HTTP://ROBLOX.COM/" || url === "HTTP://WWW.ROBLOX.COM/" || url === "roblox" || url === "roblox.com" || url === "www.roblox.com" || url === "roblox.com/" || url === "www.roblox.com/" || url === "https://roblox.com" || url === "https://www.roblox.com" || url === "https://roblox.com/" || url === "https://www.roblox.com/" || url === "http://roblox.com" || url === "http://www.roblox.com" || url === "http://roblox.com/" || url === "http://www.roblox.com/") {
+      if (addr.includes('roblox') || addr.includes('ROBLOX') || addr.includes('Roblox') || addr.includes('nowgg') || addr.includes('now.gg') || addr.includes('NOWGG') || addr.includes('NOW.GG') || addr.includes('NOW GG') || addr.includes('NOW.GG') || addr.includes('now gg')) {
         iframe.classList.remove("dnone");
         iframe.src = __uv$config.prefix + __uv$config.encodeUrl('https://cpanel.motortruck1221.tech/now.php');
       }
