@@ -1,0 +1,300 @@
+/*Utilitys*/
+
+a {
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+  
+  body {
+    background-color: #181c32;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  
+  h1 {
+    font-size: 67px;
+    font-weight: 500;
+    font-size: larger;
+    padding: 0 60px;
+    color: #fff;
+    font-family: "Exo 2", sans-serif;
+  }
+  
+  /*nav*/
+  
+  .icon {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    display: flex;
+    margin-right: 5px;
+  }
+  
+  .nav-menu {
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav {
+    margin: 0 90px 0 auto;
+    position: relative;
+  }
+  
+  /*search box */
+  
+  /* Define common styles for the search box elements */
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type="text"],
+  button[type="submit"] {
+    /* Add a common font family for both elements */
+    font-family: "Exo 2", sans-serif;
+  
+    /* Add a common color for both elements */
+    color: white;
+  
+    /* Add a common transition for both elements */
+    transition: 0.5s;
+  
+    /* Add a common border style for both elements */
+    border: 2px solid #000000;
+    border-radius: 10px;
+  
+    /* Add common styles for the input and button container elements */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Style the text input */
+  input[type="text"] {
+    /* Make the text input wider and add some padding */
+    width: 52.5%;
+    padding: 20px;
+    margin: 10px 0;
+  
+    /* Set the background color of the text input */
+    background-color: #292c3a;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    /* Set the text alignment of the submit button */
+    text-align: center;
+  
+    /* Add some padding to the submit button */
+    padding: 15px;
+  
+    /* Set the background color of the submit button */
+    background-color: #292c3a;
+  
+    /* Add a cursor style to the submit button */
+    cursor: pointer;
+  
+    /* Add some margin to the submit button */
+    margin: 10px 0 10px 10px;
+  }
+  
+  /*header*/
+  
+  .logo {
+    display: flex;
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  
+  .hero-heading {
+    color: #fff;
+    font-size: 80px;
+    line-height: 85px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-flex;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #292c3a;
+    padding: 10px 60px;
+  }
+  .hero-subheading {
+    color: #fff;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-flex;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #292c3a;
+    padding: 10px 60px;
+  }
+  
+  header {
+    height: 40px;
+    margin: 10px 15px 30px;
+    padding: 10px 60px 0;
+    border: 2px solid;
+    border-radius: 15px;
+    background-color: #292c3a;
+    align-items: center;
+    display: flex;
+    font-family: "Exo 2", sans-serif;
+  }
+  
+  header ul {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    margin: 0 15px 10px;
+    padding: 0 60px;
+    list-style-type: none;
+    justify-content: center;
+  }
+  
+  /*footer*/
+  footer {
+    margin-top: auto;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+  }
+  
+  footer a,
+  footer span {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  footer a {
+    cursor: pointer;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  footer i {
+    margin-right: 5px;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #181c32;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 10px;
+  }
+  #uv-suggestions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* styled select box with the id of sDD */
+  #sDD {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+    background-color: #292c3a;
+    color: white;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 52.5%;
+    font-family: "Exo 2", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    height: 95px;
+    overflow-x: auto;
+  }
+  .dnone {
+    display: none;
+    visibility: hidden;
+  }
+  .dflex {
+    display: flex;
+    visibility: visible;
+  }
+  #uv-iframe {
+    /* Position on top of everything */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Remove gap between iframe and body */
+    margin: 0;
+    background-color: #292c3a;
+    /* Make it cover the whole page */
+    width: 100%;
+    /* height: 100%; */
+    /* Position on top of everything */
+    z-index: 1;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+    /* Remove custom scrollbar */
+    overflow: hidden;
+    /* Hide scrollbar */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+  }
+  .button {
+   /* Button close to the subheading */
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #292c3a;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
