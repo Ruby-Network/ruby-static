@@ -1,5 +1,4 @@
-/*Utilitys*/
-
+@import './variables.css';
 a {
   text-decoration: none;
 }
@@ -10,14 +9,14 @@ a:active {
 }
 
 body {
-  background-color: #181c32;
+  background-color: var(--bg-color);
   margin: 0;
   padding: 0;
 }
 
 html {
   width: 100%;
-  overflow-y: scroll;
+  height: 100%;
 }
 
 h1 {
@@ -25,7 +24,7 @@ h1 {
   font-weight: 500;
   font-size: larger;
   padding: 0 60px;
-  color: #fff;
+  color: var(--text-color);
   font-family: "Exo 2", sans-serif;
 }
 
@@ -34,13 +33,13 @@ h1 {
 .icon {
   width: 25px;
   height: 25px;
-  fill: #fff;
+  fill: var(--text-color);
   display: flex;
   margin-right: 5px;
 }
 
 .nav-menu {
-  color: white;
+  color: var(--text-color);
   padding: 12px;
   font-size: 20px;
   display: flex;
@@ -68,13 +67,13 @@ button[type="submit"] {
   font-family: "Exo 2", sans-serif;
 
   /* Add a common color for both elements */
-  color: white;
+  color: var(--text-color);
 
   /* Add a common transition for both elements */
   transition: 0.5s;
 
   /* Add a common border style for both elements */
-  border: 2px solid #000000;
+  border: 2px solid var(--border-color);
   border-radius: 10px;
 
   /* Add common styles for the input and button container elements */
@@ -91,7 +90,7 @@ input[type="text"] {
   margin: 10px 0;
 
   /* Set the background color of the text input */
-  background-color: #292c3a;
+  background-color: var(--text-bg-color);
 }
 
 /* Style the submit button */
@@ -103,7 +102,7 @@ button[type="submit"] {
   padding: 15px;
 
   /* Set the background color of the submit button */
-  background-color: #292c3a;
+  background-color: var(--text-bg-color);
 
   /* Add a cursor style to the submit button */
   cursor: pointer;
@@ -123,27 +122,27 @@ button[type="submit"] {
 }
 
 .hero-heading {
-  color: #fff;
+  color: var(--text-color);
   font-size: 80px;
   line-height: 85px;
   font-weight: 700;
   text-transform: uppercase;
   display: inline-flex;
-  border: 2px solid black;
+  border: 2px solid var(--border-color);
   border-radius: 15px;
-  background-color: #292c3a;
+  background-color: var(--text-bg-color);
   padding: 10px 60px;
 }
 .hero-subheading {
-  color: #fff;
+  color: var(--text-color);
   font-size: 30px;
   line-height: 35px;
   font-weight: 500;
   text-transform: uppercase;
   display: inline-flex;
-  border: 2px solid black;
+  border: 2px solid var(--border-color);
   border-radius: 15px;
-  background-color: #292c3a;
+  background-color: var(--text-bg-color);
   padding: 10px 60px;
 }
 
@@ -153,7 +152,7 @@ header {
   padding: 10px 60px 0;
   border: 2px solid;
   border-radius: 15px;
-  background-color: #292c3a;
+  background-color: var(--text-bg-color);
   align-items: center;
   display: flex;
   font-family: "Exo 2", sans-serif;
@@ -186,7 +185,7 @@ footer a,
 footer span {
   margin: 0 15px;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   font-size: 15px;
 }
 
@@ -215,16 +214,16 @@ footer i {
 }
 
 ::-webkit-scrollbar-track {
-  background: #181c32;
+  background: var(--scroll-bar-track-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: var(--scroll-bar-thumb-color);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--scroll-bar-thumb-hover-color);
   border-radius: 10px;
 }
 #uv-suggestions {
@@ -238,9 +237,9 @@ footer i {
   align-items: center;
   text-align: center;
   list-style-type: none;
-  background-color: #292c3a;
-  color: white;
-  border: 2px solid #000000;
+  background-color: var(--text-bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
   border-radius: 10px;
   padding: 20px;
   margin: 10px 0;
@@ -268,7 +267,7 @@ footer i {
   bottom: 0;
   /* Remove gap between iframe and body */
   margin: 0;
-  background-color: #292c3a;
+  background-color: var(--bg-color);
   /* Make it cover the whole page */
   width: 100%;
   /* height: 100%; */

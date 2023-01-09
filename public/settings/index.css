@@ -1,6 +1,7 @@
+@import '../variables.css';
 /* Utilitys */
 p {
-  color: #fff;
+  color: var(--text-color);
 }
 
 a {
@@ -13,7 +14,7 @@ a:active {
 }
 
 body {
-  background-color: #181c32;
+  background-color: var(--bg-color);
   margin: 0;
 }
 
@@ -29,7 +30,7 @@ h1 {
   font-weight: 500;
   font-size: larger;
   padding: 0 60px;
-  color: #fff;
+  color: var(--text-color);
   font-family: "Exo 2", sans-serif;
 }
 
@@ -37,13 +38,13 @@ h1 {
 .icon {
   width: 25px;
   height: 25px;
-  fill: #fff;
+  fill: var(--text-color);
   display: flex;
   margin-right: 5px;
 }
 
 .nav-menu {
-  color: white;
+  color: var(--text-color);
   padding: 12px;
   font-size: 20px;
   display: flex;
@@ -68,7 +69,7 @@ nav {
 
 .hero-heading,
 .hero-subtitle {
-  color: #fff;
+  color: var(--text-color);
   font-size: 80px;
   line-height: 85px;
   font-weight: 700;
@@ -76,8 +77,8 @@ nav {
   display: inline-flex;
   border: 2px solid;
   border-radius: 15px;
-  background-color: #292c3a;
-  border-color: black;
+  background-color: var(--text-bg-color);
+  border-color: var(--border-color);
   padding: 10px;
   font-family: "Exo 2", sans-serif;
 }
@@ -94,7 +95,7 @@ header {
   margin-bottom: 30px;
   border: 2px solid;
   border-radius: 15px;
-  background-color: #292c3a;
+  background-color: var(--text-bg-color);
   align-items: center;
   display: flex;
   font-family: "Exo 2", sans-serif;
@@ -128,7 +129,7 @@ footer {
 footer a {
   margin: 0 15px;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   font-size: 15px;
   cursor: pointer;
   margin-right: 5px;
@@ -168,7 +169,7 @@ footer i {
   width: 300px;
   height: 246px;
   padding: 30px;
-  border: 2px solid black;
+  border: 2px solid var(--border-color);
   border-radius: 9px;
   margin-top: 20px;
   display: flex;
@@ -176,15 +177,15 @@ footer i {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  background-color: #292c3a;
+  background-color: var(--text-bg-color);
   margin-bottom: 30px;
 }
 
 /* settings stuff */
 #select-browser {
   font-family: "Shadows Into Light";
-  background-color: #000;
-  color: #fff;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
   font-size: inherit;
   cursor: pointer;
   padding: 20px 20px;
@@ -207,8 +208,8 @@ footer i {
 button,
 .select-proxy,
 input {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
   font-size: inherit;
   cursor: pointer;
   padding: 20px 20px;
@@ -244,7 +245,7 @@ input {
   right: 0;
   bottom: 0;
   background-color: #fff;
-  border-color: #000000;
+  border-color: var(--border-color);
   border: 5px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -257,7 +258,7 @@ input {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: gray;
+  background-color: var(--text-bg-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -289,15 +290,15 @@ input:checked + .slider:before {
 }
 
 ::-webkit-scrollbar-track {
-  background: #181c32;
+  background: var(--scroll-bar-track-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: var(--scroll-bar-thumb-color);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--scroll-bar-thumb-hover-color);
   border-radius: 10px;
 }

@@ -1,3 +1,3 @@
 # Static Files For Weeb Central
 
-- You Can View the Actual Repository [here](https://github.com/weeb-network/wc)
+- You Can View the Actual Repository [here](https://github.com/ruby-network/ruby)

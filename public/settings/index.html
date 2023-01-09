@@ -3,16 +3,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Weeb Central</title>
+    <title>Ruby</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta
       name="description"
-      content="Weeb Central is a web search engine that help's end internet censorship
-    Made by Hiro 🔥#0001"
+      content="Ruby is made by Ruby Network"
     />
     <meta
       name="keywords"
-      content="Weeb-Central, Proxy, Proxies, Discord, custom, weeb, central, "
+      content="Ruby, Proxy, Proxies, Discord, custom, weeb, central, "
     />
     <link rel="stylesheet" href="index.css" />
     <link
@@ -24,18 +23,20 @@
       rel="icon"
       type="image/apple-touch-icon.png"
       id="tabIcon"
-      href="/img/favicon.ico"
+      href="/favicon.ico"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <script src="../js/settings.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+    <script src="../js/particles.js" defer></script>
   </head>
 
   <body>
     <header>
-      <h1 href="#" class="logo">Weeb Central</h1>
+      <h1 href="/" class="logo">Ruby</h1>
       <nav role="navigation" class="navbar">
         <ul>
           <li>
@@ -110,15 +111,15 @@
       </nav>
     </header>
     <center><div class="hero-subtitle">SETTINGS</div></center>
-    <center><h1 class="hero-heading">WEEB CENTRAL</h1></center>
-
+    <center><h1 class="hero-heading">Ruby</h1></center>
+    <div id="particles-js" class="hidden"></div>
     <div class="container">
       <div class="settings-div">
         <p>Tab Title</p>
         <p>Change the title of the webpage</p>
         <!-- Call titleValue(); -->
         <input
-          value="Weeb Central"
+          value="Ruby"
           class="title"
           type="text"
           id="title"
@@ -176,16 +177,27 @@
       </div>
 
       <div class="settings-div">
-        <p>Backgrounds/Themes</p>
-        <p>Themes/Backgrounds (Not Implemented yet!)</p>
-
-        <select class="select-proxy">
-          <option>Coming Soon!</option>
-          <!-- <option value="Ultraviolet">Ultraviolet</option>
-          <option value="Aero">Aero</option>
-          <option value="Stomp">Stomp</option>
-          <option value="DIP">Dip</option>
-          <option value="Osana">Osana</option> -->
+        <p>Select a Theme</p>
+        <p>Themes to choose from!</p>
+        <select class="select-proxy" id="theme" title="TITLE" onchange="changeTheme(this.value)">
+          <option value="default">Default</option>
+          <option value="pink">Pink</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="yellow">Yellow</option>
+          <option value="dark">Dark</option>
+          <option value="purple">Purple</option>
+          <option value="red">Red</option>
+          <option value="terminal">Terminal</option>
+        </select>
+      </div>
+      <div class="settings-div">
+        <p>Select a Background</p>
+        <p>Backgrounds to choose from</p>
+        <select class="select-proxy" id="bgEffect" title="TITLE" onchange="changeBgEffect(this.value)">
+          <option value="none">None</option>
+          <option value="particles">Particles</option>
+          <!-- <option value="particles">Particles</option> -->
         </select>
       </div>
 
@@ -209,8 +221,8 @@
           </li>
           <li>
             <a
-              title="This is the only official discord server for Weeb Network"
-              href="https://discord.gg/qGkKQqR4Vn"
+              title="This is the only official discord server for Ruby Network"
+              href="https://auttaja.io/ruby"
             >
               <i class="fa-brands fa-discord"></i>
               Discord</a

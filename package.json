@@ -1,5 +1,5 @@
 {
-  "name": "wc-static",
+  "name": "ruby-static",
   "main": "lib/index.js",
   "version": "1.0.2",
   "type": "module",

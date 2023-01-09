@@ -1,3 +1,4 @@
+@import '../variables.css';
 /*Utilitys*/
 
 a {
@@ -10,7 +11,7 @@ a {
   }
   
   body {
-    background-color: #181c32;
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
   }
@@ -25,7 +26,7 @@ a {
     font-weight: 500;
     font-size: larger;
     padding: 0 60px;
-    color: #fff;
+    color: var(--text-color);
     font-family: "Exo 2", sans-serif;
   }
   
@@ -34,13 +35,13 @@ a {
   .icon {
     width: 25px;
     height: 25px;
-    fill: #fff;
+    fill: var(--text-color);
     display: flex;
     margin-right: 5px;
   }
   
   .nav-menu {
-    color: white;
+    color: var(--text-color);
     padding: 12px;
     font-size: 20px;
     display: flex;
@@ -68,7 +69,7 @@ a {
     font-family: "Exo 2", sans-serif;
   
     /* Add a common color for both elements */
-    color: white;
+    color: var(--text-color);
   
     /* Add a common transition for both elements */
     transition: 0.5s;
@@ -91,7 +92,7 @@ a {
     margin: 10px 0;
   
     /* Set the background color of the text input */
-    background-color: #292c3a;
+    background-color: var(--text-bg-color);
   }
   
   /* Style the submit button */
@@ -103,7 +104,7 @@ a {
     padding: 15px;
   
     /* Set the background color of the submit button */
-    background-color: #292c3a;
+    background-color: var(--text-bg-color);
   
     /* Add a cursor style to the submit button */
     cursor: pointer;
@@ -123,27 +124,27 @@ a {
   }
   
   .hero-heading {
-    color: #fff;
+    color: var(--text-color);
     font-size: 80px;
     line-height: 85px;
     font-weight: 700;
     text-transform: uppercase;
     display: inline-flex;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
     border-radius: 15px;
-    background-color: #292c3a;
+    background-color: var(--text-bg-color);
     padding: 10px 60px;
   }
   .hero-subheading {
-    color: #fff;
+    color: var(--text-color);
     font-size: 30px;
     line-height: 35px;
     font-weight: 500;
     text-transform: uppercase;
     display: inline-flex;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
     border-radius: 15px;
-    background-color: #292c3a;
+    background-color: var(--text-bg-color);
     padding: 10px 60px;
   }
   
@@ -153,7 +154,7 @@ a {
     padding: 10px 60px 0;
     border: 2px solid;
     border-radius: 15px;
-    background-color: #292c3a;
+    background-color: var(--text-bg-color);
     align-items: center;
     display: flex;
     font-family: "Exo 2", sans-serif;
@@ -186,7 +187,7 @@ a {
   footer span {
     margin: 0 15px;
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     font-size: 15px;
   }
   
@@ -215,11 +216,11 @@ a {
   }
   
   ::-webkit-scrollbar-track {
-    background: #181c32;
+    background: var(--scroll-bar-track-color);
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #000000;
+    background: var(--scroll-bar-thumb-color);
     border-radius: 10px;
   }
   
@@ -291,10 +292,10 @@ a {
     right: 5%;
     margin: 10px;
     padding: 10px;
-    border: 2px solid #000000;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
-    background-color: #292c3a;
-    color: white;
+    background-color: var(--text-bg-color);
+    color: var(--text-color);
     font-size: 20px;
     cursor: pointer;
   }
