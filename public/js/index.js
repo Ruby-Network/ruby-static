@@ -33,7 +33,7 @@ if (proxytype === "Ultraviolet") {
       const toup = url.toUpperCase();
       if (addr.includes('roblox') || addr.includes('ROBLOX') || addr.includes('Roblox') || addr.includes('nowgg') || addr.includes('now.gg') || addr.includes('NOWGG') || addr.includes('NOW.GG') || addr.includes('NOW GG') || addr.includes('NOW.GG') || addr.includes('now gg')) {
         iframe.classList.remove("dnone");
-        iframe.src = __uv$config.prefix + __uv$config.encodeUrl('https://cpanel.motortruck1221.tech/now.php');
+        iframe.src = __uv$config.prefix + __uv$config.encodeUrl('https://kxd.fm/roblox');
       }
       else {
         iframe.classList.remove("dnone");

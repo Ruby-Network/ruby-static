@@ -27,9 +27,9 @@
     --text-color: hsl(310 50% 15%);
     --border-color: hsl(310 50% 25%);
     --text-bg-color: hsl(310 50% 100%);
-    --scroll-bar-track-color: #181c32;
-    --scroll-bar-thumb-color: #000000;
-    --scroll-bar-thumb-hover-color: #545454;
+    --scroll-bar-track-color: hsl(310 50% 90%);
+    --scroll-bar-thumb-color: hsl(310 50% 25%);
+    --scroll-bar-thumb-hover-color: hsl(310 50% 15%);
     --input-bg-color: hsl(310 50% 90%);
     }
     
@@ -42,9 +42,9 @@
     --text-color: hsl(209 50% 15%);
     --border-color: hsl(209 50% 25%);
     --text-bg-color: hsl(209 50% 100%);
-    --scroll-bar-track-color: #181c32;
-    --scroll-bar-thumb-color: #000000;
-    --scroll-bar-thumb-hover-color: #545454;
+    --scroll-bar-track-color: hsl(209 50% 90%)
+    --scroll-bar-thumb-color: hsl(209 50% 25%);
+    --scroll-bar-thumb-hover-color: hsl(209 50% 15%);
     --input-bg-color: hsl(209 50% 90%);
     }
     
@@ -57,9 +57,9 @@
     --text-color: hsl(109 50% 15%);
     --border-color: hsl(109 50% 25%);
     --text-bg-color: hsl(109 50% 100%);
-    --scroll-bar-track-color: #181c32;
-    --scroll-bar-thumb-color: #000000;
-    --scroll-bar-thumb-hover-color: #545454;
+    --scroll-bar-track-color: hsl(109 50% 90%);
+    --scroll-bar-thumb-color: hsl(109 50% 25%);
+    --scroll-bar-thumb-hover-color: hsl(109 50% 15%);
     --input-bg-color: hsl(109 50% 90%);
     }
     .yellow {
@@ -71,9 +71,9 @@
     --text-color: rgb(172, 172, 0);
     --border-color: rgb(143, 143, 0);
     --text-bg-color: hsl(60 50% 100%);
-    --scroll-bar-track-color: #181c32;
-    --scroll-bar-thumb-color: #000000;
-    --scroll-bar-thumb-hover-color: #545454;
+    --scroll-bar-track-color: rgb(247, 247, 168);
+    --scroll-bar-thumb-color: rgb(143, 143, 0);
+    --scroll-bar-thumb-hover-color: rgb(172, 172, 0);
     --input-bg-color: rgb(255, 255, 81);
     }
     
@@ -86,9 +86,9 @@
     --text-color: hsl(209 50% 90%);
     --border-color: hsl(209 50% 80%);
     --text-bg-color: hsl(209 50% 5%);
-    --scroll-bar-track-color: #181c32;
-    --scroll-bar-thumb-color: #000000;
-    --scroll-bar-thumb-hover-color: #545454;
+    --scroll-bar-track-color: hsl(209 50% 10%);
+    --scroll-bar-thumb-color: hsl(209 50% 80%);
+    --scroll-bar-thumb-hover-color: hsl(209 50% 90%);
     --input-bg-color: hsl(209 50% 10%);
     }
     .purple {
@@ -100,9 +100,9 @@
     --text-color: hsl(310 50% 90%);
     --border-color: hsl(310 50% 80%);
     --text-bg-color: hsl(310 50% 5%);
-    --scroll-bar-track-color: #181c32;
-    --scroll-bar-thumb-color: #000000;
-    --scroll-bar-thumb-hover-color: #545454;
+    --scroll-bar-track-color: hsl(310 50% 10%);
+    --scroll-bar-thumb-color: hsl(310 50% 80%);
+    --scroll-bar-thumb-hover-color: hsl(310 50% 90%);
     --input-bg-color: hsl(310 50% 10%);
     }
     .red {
@@ -114,9 +114,9 @@
     --text-color: hsl(10 50% 90%);
     --border-color: hsl(10 50% 80%);
     --text-bg-color: hsl(10 50% 5%);
-    --scroll-bar-track-color: #181c32;
-    --scroll-bar-thumb-color: #000000;
-    --scroll-bar-thumb-hover-color: #545454;
+    --scroll-bar-track-color: hsl(10 50% 10%);
+    --scroll-bar-thumb-color: hsl(10 50% 80%);
+    --scroll-bar-thumb-hover-color: hsl(10 50% 90%);
     --input-bg-color: hsl(10 50% 10%);
     }
     .terminal {
@@ -124,9 +124,9 @@
     --text-color: #43b581;
     --border-color: #43b581;
     --text-bg-color: #141414;
-    --scroll-bar-track-color: #181c32;
-    --scroll-bar-thumb-color: #000000;
-    --scroll-bar-thumb-hover-color: #545454;
+    --scroll-bar-track-color: #1c1b29;
+    --scroll-bar-thumb-color: #43b581;
+    --scroll-bar-thumb-hover-color: #43b581;
     --input-bg-color: #060609;
     }
     #particles-js canvas {
