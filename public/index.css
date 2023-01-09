@@ -25,7 +25,7 @@ h1 {
   font-size: larger;
   padding: 0 60px;
   color: var(--text-color);
-  font-family: "Exo 2", sans-serif;
+  font-family: var(--font);
 }
 
 /*nav*/
@@ -64,7 +64,7 @@ nav {
 input[type="text"],
 button[type="submit"] {
   /* Add a common font family for both elements */
-  font-family: "Exo 2", sans-serif;
+  font-family: var(--font);
 
   /* Add a common color for both elements */
   color: var(--text-color);
@@ -155,7 +155,7 @@ header {
   background-color: var(--text-bg-color);
   align-items: center;
   display: flex;
-  font-family: "Exo 2", sans-serif;
+  font-family: var(--font);
 }
 
 header ul {
@@ -244,7 +244,7 @@ footer i {
   padding: 20px;
   margin: 10px 0;
   width: 52.5%;
-  font-family: "Exo 2", sans-serif;
+  font-family: var(--font);
   font-size: 20px;
   cursor: pointer;
   height: 95px;

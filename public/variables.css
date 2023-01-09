@@ -7,6 +7,7 @@
     --scroll-bar-thumb-color: #000000;
     --scroll-bar-thumb-hover-color: #545454;
     --input-bg-color: #000000;
+    --font: 'Exo 2', sans-serif;
   }
   .default {
     --bg-color: #181c32;
@@ -17,6 +18,7 @@
     --scroll-bar-thumb-color: #000000;
     --scroll-bar-thumb-hover-color: #545454;
     --input-bg-color: #000000;
+    --font: 'Exo 2', sans-serif;
   }
   .pink {
     /* --clr-body-bg: hsl(310 50% 90%);
@@ -119,6 +121,35 @@
     --scroll-bar-thumb-hover-color: hsl(10 50% 90%);
     --input-bg-color: hsl(10 50% 10%);
     }
+    .orange {
+      /* --clr-body-bg: hsl(10 50% 10%);
+      --clr-card-bg: hsl(10 50% 10%);
+      --clr-text: hsl(10 50% 90%);
+      --clr-heading: hsl(10 50% 80%); */
+      --bg-color: rgb(21, 21, 21);
+      --text-color: rgb(242, 162, 3);
+      --border-color: rgb(225, 255, 0);
+      --text-bg-color: hsl(10 50% 5%);
+      --scroll-bar-track-color: rgb(21, 21, 21);
+      --scroll-bar-thumb-color: rgb(255, 255, 0);
+      --scroll-bar-thumb-hover-color: rgb(242, 162, 3);
+      --input-bg-color: hsl(10 50% 10%);
+    }
+    .railway {
+      /* --clr-body-bg: hsl(10 50% 10%);
+      --clr-card-bg: hsl(10 50% 10%);
+      --clr-text: hsl(10 50% 90%);
+      --clr-heading: hsl(10 50% 80%); */
+      --bg-color: rgb(21, 21, 21);
+      --text-color: rgb(242, 162, 3);
+      --border-color: rgb(225, 255, 0);
+      --text-bg-color: hsl(10 50% 5%);
+      --scroll-bar-track-color: rgb(21, 21, 21);
+      --scroll-bar-thumb-color: rgb(255, 255, 0);
+      --scroll-bar-thumb-hover-color: rgb(242, 162, 3);
+      --input-bg-color: hsl(10 50% 10%);
+      --font: 'rail';
+    }
     .terminal {
     --bg-color: #1c1b29;
     --text-color: #43b581;
@@ -155,4 +186,8 @@
     -ms-transform: scale(0);
     transform: scale(0);
     opacity: 0;
+    }
+    @font-face {
+      font-family: rail;
+      src: url('/fonts/tgl.ttf');
     }
