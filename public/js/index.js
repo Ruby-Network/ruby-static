@@ -33,9 +33,28 @@ if (proxytype === "Ultraviolet") {
       const url = search(address.value, searchEngine.value);
       const addr = address.value
       const toup = url.toUpperCase();
-      if (addr.includes('roblox') || addr.includes('ROBLOX') || addr.includes('Roblox') || addr.includes('nowgg') || addr.includes('now.gg') || addr.includes('NOWGG') || addr.includes('NOW.GG') || addr.includes('NOW GG') || addr.includes('NOW.GG') || addr.includes('now gg')) {
+      if (addr.includes('roblox') || addr.includes('ROBLOX') || addr.includes('Roblox')) {
         iframe.classList.remove("dnone");
         iframe.src = __uv$config.prefix + __uv$config.encodeUrl('https://kxd.fm/roblox');
+      }
+      if (addr.includes('Call of Duty') || addr.includes('call of duty') || addr.includes('Call Of Duty') || addr.includes('call Of Duty') || addr.includes('Call of duty') || addr.includes('call Of duty') || addr.includes('Call Of duty') || addr.includes('call of Duty')) {
+        iframe.classList.remove("dnone");
+        iframe.src = __uv$config.prefix + __uv$config.encodeUrl('https://kxd.fm/nowgg/games/cod.html');
+      }
+      if (addr.includes('Stumble Guys Play Now') || addr.includes('stumble guys play now') || addr.includes('Stumble Guys play now') || addr.includes('stumble guys Play now') || addr.includes('Stumble guys play now') || addr.includes('stumble Guys play now') || addr.includes('Stumble guys Play now') || addr.includes('stumble Guys Play now')) {
+        iframe.classList.remove("dnone");
+        iframe.src = __uv$config.prefix + __uv$config.encodeUrl('https://kxd.fm/nowgg/games/stumble-guys.html');
+      }
+      if (addr.includes('Pixel Gun 3D play now') || addr.includes('pixel gun 3d play now') || addr.includes('Pixel Gun 3d play now') || addr.includes('pixel gun 3D play now') || addr.includes('Pixel gun 3d play now') || addr.includes('pixel Gun 3d play now') || addr.includes('Pixel gun 3D Play now') || addr.includes('pixel Gun 3D Play now')) {
+        iframe.classList.remove("dnone");
+        iframe.src = __uv$config.prefix + __uv$config.encodeUrl('https://kxd.fm/nowgg/games/pixel-gun.html');
+      }
+      if (addr.includes('Android OS Emulator play now' ) || addr.includes('Android OS Emulator Play Now') || addr.includes('Android OS Emulator Play Now') || addr.includes('Android OS Emulator play now') || addr.includes('Android OS emulator play now') || addr.includes('Android OS emulator Play Now') || addr.includes('Android OS emulator Play Now') || addr.includes('Android OS emulator play now')) {
+        iframe.classList.remove("dnone");
+        iframe.src = __uv$config.prefix + __uv$config.encodeUrl('https://kxd.fm/nowgg/games/launcher.html');
+      }
+      if (addr.includes('now.gg play now') || addr.includes('now.gg play now') || addr.includes('NOW.GG PLAY NOW') || addr.includes('NOW.GG PLAY NOW') || addr.includes('Now.gg play now') || addr.includes('Now.gg play now') || addr.includes('Now.gg Play now') || addr.includes('Now.gg Play now')) {
+        window.location = '/games/'
       }
       else {
         iframe.classList.remove("dnone");
