@@ -13,6 +13,8 @@ const errorCode = document.getElementById("uv-error-code");
 const iframe = document.getElementById("uv-iframe");
 let proxytype = localStorage.getItem("proxy");
 let currenturl = window.location.href;
+// import { proxyApi, prefix } from "/aero/config.js";
+// // import ProxyManager from "./sdk/ProxyManager.js";
 if (proxytype === "Ultraviolet") {
   document
     .getElementById("uv-form")
@@ -110,3 +112,39 @@ if (proxytype === "Osana") {
     return a;
   }
 }
+// if (proxytype === "aero") {
+//   document.getElementById("uv-form").addEventListener("submit", async (event) => {
+//     event.preventDefault();
+//     worker().then((event) => {
+//       var val = document.querySelector(".dipinput").value;
+//       let se = document.getElementById("uv-search-engine").value;
+//       // remove %s from the search engine url
+//       se = se.replace("%s", "");
+//       // add the search query to the end of the search engine url
+//       se = se + val;
+//       console.log(se);
+//       if (se === 'https://www.google.com/search?q=roblox' || se === 'https://www.google.com/search?q=ROBLOX' ) {
+//         window.location = '/errors/nowgg-error.html'
+//       }
+//       iframe.classList.remove("dnone");
+//       //console.log(proxyApi)
+//       iframe.src = se;
+//       if (val.includes("https://") || val.includes("http://")) {
+//         if (val === 'https://now.gg' || val === 'https://www.now.gg' || val === 'https://roblox.com') {
+//           window.location = '/errors/nowgg-error.html'
+//         }
+//         iframe.classList.remove("dnone");
+//         iframe.src = __aero$config.codec.encode(val);
+//       }
+//     }
+//     );
+//   });
+//   async function worker() {
+//     //register service worker for aero proxy the file is a module
+//     var a = await navigator.serviceWorker.register("/aero.sw.js", {
+//       type: "module",
+//       scope: '/go/',
+//     });
+//   }
+
+// }

@@ -1,4 +1,4 @@
-particlesJS("particles-js", {
+particlesJS("multicolor-pjs", {
     "particles": {
       "number": {
         "value": 300,

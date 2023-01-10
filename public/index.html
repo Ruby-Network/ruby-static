@@ -33,14 +33,16 @@
     <script src="/osana/osana.bundle.js" defer></script>
     <script src="/osana/osana.config.js" defer></script>
     <script src="/js/register-sw.js" defer></script>
-    <script src="/js/index.js" defer></script>
+    <script type="module" src="/js/index.js" defer></script>
     <script src="/dip/dip.config.js" defer></script>
     <script src="/dip/dip.page.js" defer></script>
     <script src="./js/search.js" defer></script>
     <script src="./js/suggestions.js" defer></script>
     <script src="./js/settings.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
-    <script src="../js/particles.js" defer></script>
+    <script src="../js/multicolor.js" defer></script>
+    <script src="../js/space-pjs.js" defer></script>
+    <!-- <script type="module" src="aero.sw.js" defer></script> -->
   </head>
 
   <body>
@@ -119,7 +121,8 @@
         </ul>
       </nav>
     </header>
-    <div id="particles-js" class="hidden"></div>
+    <div id="multicolor-pjs" class="hidden particles"></div>
+    <div id="space-pjs" class="hidden particles"></div>
     <div class="hero-container w-container">
       <center><h1 class="hero-heading">Ruby</h1></center>
       <form class="dipform" action="submit" id="uv-form">

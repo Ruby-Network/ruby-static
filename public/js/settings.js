@@ -315,8 +315,17 @@ function changeBgEffect(value) {
   document.documentElement.className = value;
   localStorage.setItem('bgEffect', value);
   // remove class hidden from particles js
-  if (value === 'particles') {
-    document.getElementById('particles-js').classList.remove('hidden');
+  if (value === 'multicolor') {
+    if (!document.getElementById('space-pjs').classList.contains('hidden')) {
+      document.getElementById('space-pjs').classList.add('hidden');
+    };
+    document.getElementById('multicolor-pjs').classList.remove('hidden');
+  }
+  if (value === 'space') {
+    if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
+      document.getElementById('multicolor-pjs').classList.add('hidden');
+    }
+    document.getElementById('space-pjs').classList.remove('hidden');
   }
   //document.getElementById('particles-js').classList.remove('hidden');
   window.location.reload();
@@ -325,27 +334,41 @@ function setBgEffect() {
 let bgEffect = localStorage.getItem('bgEffect');
 if (bgEffect) {
 if (bgEffect !== 'none') {
-    // document.documentElement.className = bgEffect;
-    if (document.getElementById('particles-js').classList.contains('hidden')) {
-      document.getElementById('particles-js').classList.remove('hidden');
-    } 
+  let bgEffect = localStorage.getItem('bgEffect');
+  if (bgEffect === 'multicolor') {
+    if (!document.getElementById('space-pjs').classList.contains('hidden')) {
+      document.getElementById('space-pjs').classList.add('hidden');
+    };
+    document.getElementById('multicolor-pjs').classList.remove('hidden');
     document.getElementById('bgEffect').value = bgEffect;
   }
-else {
-  //document.documentElement.className = 'none';
-  // set value to the dropdown
-  document.getElementById('bgEffect').value = 'none';
-  if (!document.getElementById('particles-js').classList.contains('hidden')) {
-    document.getElementById('particles-js').classList.add('hidden');
+  if (bgEffect === 'space') {
+    if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
+      document.getElementById('multicolor-pjs').classList.add('hidden');
+    };
+    document.getElementById('space-pjs').classList.remove('hidden');
+    document.getElementById('bgEffect').value = bgEffect;
   }
 }
+else {
+  if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
+    document.getElementById('multicolor-pjs').classList.add('hidden');
+  }
+  if (!document.getElementById('space-pjs').classList.contains('hidden')) {
+    document.getElementById('space-pjs').classList.add('hidden');
+  }
+  document.getElementById('bgEffect').value = 'none';
+}
 }
 else {
   //document.documentElement.className = 'none';
   // set value to the dropdown
   document.getElementById('bgEffect').value = 'none';
-  if (!document.getElementById('particles-js').classList.contains('hidden')) {
-    document.getElementById('particles-js').classList.add('hidden');
+  if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
+    document.getElementById('multicolor-pjs').classList.add('hidden');
+  }
+  if (!document.getElementById('space-pjs').classList.contains('hidden')) {
+    document.getElementById('space-pjs').classList.add('hidden');
   }
 }
 }
@@ -354,14 +377,28 @@ let bgEffect = localStorage.getItem('bgEffect');
 if (bgEffect) {
 if (bgEffect !== 'none') {
   // document.documentElement.className = bgEffect;
-  if (document.getElementById('particles-js').classList.contains('hidden')) {
-    document.getElementById('particles-js').classList.remove('hidden');
+  if (bgEffect === 'multicolor') {
+    if (!document.getElementById('space-pjs').classList.contains('hidden')) {
+      document.getElementById('space-pjs').classList.add('hidden');
+    };
+    document.getElementById('multicolor-pjs').classList.remove('hidden');
+  }
+  if (bgEffect === 'space') {
+    if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
+      document.getElementById('multicolor-pjs').classList.add('hidden');
+    };
+    document.getElementById('space-pjs').classList.remove('hidden');
   }
 }
 else {
   //document.documentElement.className = 'none';
-  if (!document.getElementById('particles-js').classList.contains('hidden')) {
-    document.getElementById('particles-js').classList.add('hidden');
+  // set value to the dropdown
+  //document.getElementById('bgEffect').value = 'none';
+  if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
+    document.getElementById('multicolor-pjs').classList.add('hidden');
+  }
+  if (!document.getElementById('space-pjs').classList.contains('hidden')) {
+    document.getElementById('space-pjs').classList.add('hidden');
   }
 }
 }
@@ -369,9 +406,12 @@ else {
   //document.documentElement.className = 'none';
   // set value to the dropdown
   //document.getElementById('bgEffect').value = 'none';
-  if (!document.getElementById('particles-js').classList.contains('hidden')) {
-    document.getElementById('particles-js').classList.add('hidden');
+  if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
+    document.getElementById('multicolor-pjs').classList.add('hidden');
   }
+  if (!document.getElementById('space-pjs').classList.contains('hidden')) {
+    document.getElementById('space-pjs').classList.add('hidden');
+}
 }
 }
 

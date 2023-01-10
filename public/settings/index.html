@@ -31,7 +31,8 @@
     />
     <script src="../js/settings.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
-    <script src="../js/particles.js" defer></script>
+    <script src="../js/multicolor.js" defer></script>
+    <script src="../js/space-pjs.js" defer></script>
   </head>
 
   <body>
@@ -112,7 +113,8 @@
     </header>
     <center><div class="hero-subtitle">SETTINGS</div></center>
     <center><h1 class="hero-heading">Ruby</h1></center>
-    <div id="particles-js" class="hidden"></div>
+    <div id="multicolor-pjs" class="hidden particles"></div>
+    <div id="space-pjs" class="hidden particles"></div>
     <div class="container">
       <div class="settings-div">
         <p>Tab Title</p>
@@ -139,9 +141,9 @@
         />
       </div>
       <div class="settings-div">
-        <p>about:blank</p>
+        <p>About:Blank</p>
 
-        <p>Opens the page as about:blank</p>
+        <p>Opens the page as About:Blank</p>
 
         <button onclick="AboutBlankCloak()" class="button">About:Blank</button>
       </div>
@@ -171,6 +173,7 @@
           <option value="Ultraviolet">Ultraviolet</option>
           <option value="DIP">Dip</option>
           <option value="Osana">Osana</option>
+          <!-- <option value="aero">Aero</option> -->
           <!--FOR LATER: <option value="Aero">Aero</option>
           <option value="Stomp">Stomp</option> -->
         </select>
@@ -190,7 +193,14 @@
           <option value="red">Red</option>
           <option value="orange">Orange</option>
           <!-- <option value="railway">Railway</option> -->
+          <option value="midnight">Midnight</option>
+          <option value="space">Space</option>
+          <option value="marsh">Marsh</option>
+          <option value="pinkish-purple">Pinkish Purple</option>
+          <option value="nord">Nord</option>
+          <option value="connected">Connected</option>
           <option value="terminal">Terminal</option>
+          <option value="rainbow">Rainbow</option>
         </select>
       </div>
       <div class="settings-div">
@@ -198,7 +208,8 @@
         <p>Backgrounds to choose from</p>
         <select class="select-proxy" id="bgEffect" title="TITLE" onchange="changeBgEffect(this.value)">
           <option value="none">None</option>
-          <option value="particles">Particles</option>
+          <option value="multicolor">Multicolor</option>
+          <option value="space">Space</option>
           <!-- <option value="particles">Particles</option> -->
         </select>
       </div>
