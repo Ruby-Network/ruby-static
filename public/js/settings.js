@@ -279,11 +279,34 @@ if (
 }
 proxySet();
 //! End Proxy Changer
+//! BOTH BG AND THEME STUFF
+let autoChanged = localStorage.getItem("autoChanged");
+if (!autoChanged) {
+  localStorage.setItem("autoChanged", "null");
+}
+//! END BOTH BG AND THEME STUFF
+//! Theme Changer
 function changeTheme(value) {
   //console.log(value);
   document.documentElement.className = value;
   localStorage.setItem('theme', value);
-  //window.location.reload();
+  if (autoChanged === 'null' || autoChanged === 'true') {
+    let bgEffect = localStorage.getItem('bgEffect')
+    if (value === 'space' || value === 'midnight') {
+      changeBgEffect('space');
+      localStorage.setItem('autoChanged', 'true')
+    } else if (value === 'dark') {
+      changeBgEffect('multicolor');
+      localStorage.setItem('autoChanged', 'true')
+    } else if (value === 'terminal') {
+      changeBgEffect('terminal');
+      localStorage.setItem('autoChanged', 'true')
+    }
+    else {
+      changeBgEffect('none');
+      localStorage.setItem('autoChanged', 'null')
+    }
+  }
 }
 function setTheme() {
 let theme = localStorage.getItem('theme');
@@ -311,65 +334,57 @@ if (
   window.location.pathname === "/settings/"
 ) { setTheme(); } 
 else { setThemeEverywhereElse();  }
-function changeBgEffect(value) {
-  document.documentElement.className = value;
+//! END THEME
+//! BG Effect
+function changeBgEffect(value, manual) {
+  if (manual === true) {
+    localStorage.setItem('autoChanged', 'false')
+    if(document.getElementById('bgEffect').value === 'none') {
+      localStorage.setItem('autoChanged', 'null')
+    }
+  }
   localStorage.setItem('bgEffect', value);
   // remove class hidden from particles js
   if (value === 'multicolor') {
-    if (!document.getElementById('space-pjs').classList.contains('hidden')) {
-      document.getElementById('space-pjs').classList.add('hidden');
-    };
-    document.getElementById('multicolor-pjs').classList.remove('hidden');
+    updateBgEffect('space-pjs', 'multicolor-pjs');
   }
   if (value === 'space') {
-    if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
-      document.getElementById('multicolor-pjs').classList.add('hidden');
-    }
-    document.getElementById('space-pjs').classList.remove('hidden');
+    updateBgEffect('multicolor-pjs', 'space-pjs');
   }
-  //document.getElementById('particles-js').classList.remove('hidden');
+  if (value === 'terminal') {
+    updateBgEffect('multicolor-pjs', 'terminal-pjs');
+  }
   window.location.reload();
+}
+function updateBgEffect(remove, add) {
+  if (!document.getElementById(remove).classList.contains('hidden')) {
+    document.getElementById(remove).classList.add('hidden');
+  }
+  document.getElementById(add).classList.remove('hidden');
+  add = add.replace('-pjs', '');
+  if (window.location.pathname === "/settings" || window.location.pathname === "/settings/") {
+    document.getElementById('bgEffect').value = add;
+  }
+  localStorage.setItem('bgEffect', add);
 }
 function setBgEffect() {
 let bgEffect = localStorage.getItem('bgEffect');
 if (bgEffect) {
 if (bgEffect !== 'none') {
-  let bgEffect = localStorage.getItem('bgEffect');
   if (bgEffect === 'multicolor') {
-    if (!document.getElementById('space-pjs').classList.contains('hidden')) {
-      document.getElementById('space-pjs').classList.add('hidden');
-    };
-    document.getElementById('multicolor-pjs').classList.remove('hidden');
-    document.getElementById('bgEffect').value = bgEffect;
+    updateBgEffect('space-pjs', 'multicolor-pjs');
   }
   if (bgEffect === 'space') {
-    if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
-      document.getElementById('multicolor-pjs').classList.add('hidden');
-    };
-    document.getElementById('space-pjs').classList.remove('hidden');
-    document.getElementById('bgEffect').value = bgEffect;
+    updateBgEffect('multicolor-pjs', 'space-pjs');
   }
-}
-else {
-  if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
-    document.getElementById('multicolor-pjs').classList.add('hidden');
+  if (bgEffect === 'terminal') {
+    updateBgEffect('multicolor-pjs', 'terminal-pjs');
   }
-  if (!document.getElementById('space-pjs').classList.contains('hidden')) {
-    document.getElementById('space-pjs').classList.add('hidden');
-  }
-  document.getElementById('bgEffect').value = 'none';
 }
 }
 else {
-  //document.documentElement.className = 'none';
-  // set value to the dropdown
   document.getElementById('bgEffect').value = 'none';
-  if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
-    document.getElementById('multicolor-pjs').classList.add('hidden');
-  }
-  if (!document.getElementById('space-pjs').classList.contains('hidden')) {
-    document.getElementById('space-pjs').classList.add('hidden');
-  }
+  localStorage.setItem('bgEffect', 'none');
 }
 }
 function setBgEffectEverywhereElse () {
@@ -378,47 +393,25 @@ if (bgEffect) {
 if (bgEffect !== 'none') {
   // document.documentElement.className = bgEffect;
   if (bgEffect === 'multicolor') {
-    if (!document.getElementById('space-pjs').classList.contains('hidden')) {
-      document.getElementById('space-pjs').classList.add('hidden');
-    };
-    document.getElementById('multicolor-pjs').classList.remove('hidden');
+    updateBgEffect('space-pjs', 'multicolor-pjs');
   }
   if (bgEffect === 'space') {
-    if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
-      document.getElementById('multicolor-pjs').classList.add('hidden');
-    };
-    document.getElementById('space-pjs').classList.remove('hidden');
+    updateBgEffect('multicolor-pjs', 'space-pjs');
   }
-}
-else {
-  //document.documentElement.className = 'none';
-  // set value to the dropdown
-  //document.getElementById('bgEffect').value = 'none';
-  if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
-    document.getElementById('multicolor-pjs').classList.add('hidden');
-  }
-  if (!document.getElementById('space-pjs').classList.contains('hidden')) {
-    document.getElementById('space-pjs').classList.add('hidden');
+  if (bgEffect === 'terminal') {
+    updateBgEffect('multicolor-pjs', 'terminal-pjs');
   }
 }
 }
 else {
-  //document.documentElement.className = 'none';
-  // set value to the dropdown
-  //document.getElementById('bgEffect').value = 'none';
-  if (!document.getElementById('multicolor-pjs').classList.contains('hidden')) {
-    document.getElementById('multicolor-pjs').classList.add('hidden');
-  }
-  if (!document.getElementById('space-pjs').classList.contains('hidden')) {
-    document.getElementById('space-pjs').classList.add('hidden');
+  localStorage.setItem('bgEffect', 'none');
 }
 }
-}
-
 if (
   window.location.pathname === "/settings" ||
   window.location.pathname === "/settings/"
 ) { setBgEffect(); } else { setBgEffectEverywhereElse();  }
+//! END BG Effect
 //! local storage
 function setLocalStorage(key, value) {
   //set local storage
