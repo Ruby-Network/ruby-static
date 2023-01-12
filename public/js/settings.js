@@ -308,6 +308,7 @@ function changeTheme(value) {
     else {
       changeBgEffect('none');
       localStorage.setItem('autoChanged', 'null')
+      document.getElementById('bgEffect').value = 'none';
     }
   }
 }
