@@ -301,6 +301,9 @@ function changeTheme(value) {
     } else if (value === 'terminal') {
       changeBgEffect('terminal');
       localStorage.setItem('autoChanged', 'true')
+    } else if (value === 'nord') {
+      changeBgEffect('blocks');
+      localStorage.setItem('autoChanged', 'true')
     }
     else {
       changeBgEffect('none');
@@ -346,20 +349,24 @@ function changeBgEffect(value, manual) {
   localStorage.setItem('bgEffect', value);
   // remove class hidden from particles js
   if (value === 'multicolor') {
-    updateBgEffect('space-pjs', 'multicolor-pjs');
+    updateBgEffect('multicolor-pjs');
   }
   if (value === 'space') {
-    updateBgEffect('multicolor-pjs', 'space-pjs');
+    updateBgEffect('space-pjs');
   }
   if (value === 'terminal') {
-    updateBgEffect('multicolor-pjs', 'terminal-pjs');
+    updateBgEffect('terminal-pjs');
+  }
+  if (value === 'blocks') {
+    updateBgEffect('blocks-pjs');
   }
   window.location.reload();
 }
-function updateBgEffect(remove, add) {
-  if (!document.getElementById(remove).classList.contains('hidden')) {
-    document.getElementById(remove).classList.add('hidden');
-  }
+function updateBgEffect(add) {
+  // get the previous effect and remove it
+  // let previous = localStorage.getItem('bgEffect');
+  // console.log(previous);
+  // document.getElementById(previous + '-pjs').classList.add('hidden');
   document.getElementById(add).classList.remove('hidden');
   add = add.replace('-pjs', '');
   if (window.location.pathname === "/settings" || window.location.pathname === "/settings/") {
@@ -372,13 +379,16 @@ let bgEffect = localStorage.getItem('bgEffect');
 if (bgEffect) {
 if (bgEffect !== 'none') {
   if (bgEffect === 'multicolor') {
-    updateBgEffect('space-pjs', 'multicolor-pjs');
+    updateBgEffect('multicolor-pjs');
   }
   if (bgEffect === 'space') {
-    updateBgEffect('multicolor-pjs', 'space-pjs');
+    updateBgEffect('space-pjs');
   }
   if (bgEffect === 'terminal') {
-    updateBgEffect('multicolor-pjs', 'terminal-pjs');
+    updateBgEffect('terminal-pjs');
+  }
+  if (bgEffect === 'blocks') {
+    updateBgEffect('blocks-pjs');
   }
 }
 }
@@ -393,13 +403,16 @@ if (bgEffect) {
 if (bgEffect !== 'none') {
   // document.documentElement.className = bgEffect;
   if (bgEffect === 'multicolor') {
-    updateBgEffect('space-pjs', 'multicolor-pjs');
+    updateBgEffect('multicolor-pjs');
   }
   if (bgEffect === 'space') {
-    updateBgEffect('multicolor-pjs', 'space-pjs');
+    updateBgEffect('space-pjs');
   }
   if (bgEffect === 'terminal') {
-    updateBgEffect('multicolor-pjs', 'terminal-pjs');
+    updateBgEffect('terminal-pjs');
+  }
+  if (bgEffect === 'blocks') {
+    updateBgEffect('blocks-pjs');
   }
 }
 }
