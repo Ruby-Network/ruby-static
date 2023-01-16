@@ -306,7 +306,9 @@ function changeTheme(value) {
       localStorage.setItem('autoChanged', 'true')
     }
     else {
-      changeBgEffect('none');
+      if (localStorage.getItem('bgEffect') !== 'none') {
+        changeBgEffect('none');
+      }
       localStorage.setItem('autoChanged', 'null')
       document.getElementById('bgEffect').value = 'none';
     }

@@ -10,6 +10,16 @@
     --font: 'Exo 2', sans-serif;
   }
   .default {
+    --bg-color: #370e11;
+    --text-color: #ffff;
+    --border-color: #000000;
+    --text-bg-color: #b41610;
+    --scroll-bar-track-color: #370e11;
+    --scroll-bar-thumb-color: #b41610;
+    --scroll-bar-thumb-hover-color: #715858;
+    --input-bg-color: #580000;
+  }
+  .blue-and-gray {
     --bg-color: #181c32;
     --text-color: #ffff;
     --border-color: #000000;
