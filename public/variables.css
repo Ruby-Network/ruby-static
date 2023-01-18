@@ -266,3 +266,103 @@
       font-family: terminal;
       src: url('/fonts/terminal.ttf');
     }
+.iframe-control {
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  right:0%;
+  height: 8%;
+  position: fixed;
+  z-index: 9999;
+  background-color: var(--bg-color);
+  border-bottom: 2px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5%;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  font: var(--font);
+  font-size: 1.5vw;
+  color: var(--text-color);
+  /* border-radius: 10px; */
+}
+.url-bar {
+  width: 60%;
+  /* center in the middle of iframe-control */
+  margin: 0 auto;
+  /* center in the middle of iframe-control */
+  text-align: center;
+  /* center in the middle of iframe-control */
+  position: relative;
+  /* center in the middle of iframe-control */
+  top: 25%;
+  left: 6%;
+  /* center in the middle of iframe-control */
+  transform: translateY(-50%);
+  /* center in the middle of iframe-control */
+  font-size: 1.5vw;
+  /* center in the middle of iframe-control */
+  color: var(--text-color);
+  /* center in the middle of iframe-control */
+  font: var(--font);
+  background: var(--text-bg-color);
+  border: 1.5px solid var(--border-color);
+  border-radius: 20px;
+}
+.icons-for-control {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5vw;
+  color: var(--text-color);
+  font: var(--font);
+  position: relative;
+  right: 5%;
+  /* set mouse pointer to hand */
+  cursor: pointer;
+
+}
+/* .svg-loader{
+  display:flex;
+  position: relative;
+  align-content: space-around;
+  justify-content: center;
+  right: 90%;
+  width: 40px;
+  height: 40px;
+  bottom: 65%;
+}
+.loader-svg{
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke: var(--text-color);
+}
+.loader-svg.bg{
+  stroke-width: 8px;
+  stroke: var(--text-bg-color);
+}
+
+.animate{
+  stroke-dasharray: 242.6;
+  animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;
+}
+
+@keyframes fill-animation{
+  0%{
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 141.3;
+    stroke-dashoffset: 141.3;
+  }
+  100%{
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 282.6;
+  }
+} */

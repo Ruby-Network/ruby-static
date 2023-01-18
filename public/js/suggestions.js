@@ -41,13 +41,12 @@ searchInput.addEventListener("input", async (event) => {
       suggestionsContainer.classList.remove("dnone");
       // add the display flex class
       suggestionsContainer.classList.add("dflex");
-      suggestionsData.addEventListener("click", (event) => {
+      suggestionsData.addEventListener("click", async (event) => {
         // clear the search input
         searchForm.value = "";
-        // Get the clicked suggestion
         const suggestion = event.target.textContent;
         searchForm.value = suggestion;
-        // hit enter on the form to submit the search
+        searchInput.dispatchEvent(new Event("submit"));
       });
       if (suggestions.length === 0) {
         suggestionsContainer.classList.remove("dflex");
@@ -58,4 +57,31 @@ searchInput.addEventListener("input", async (event) => {
     // Handle the error
     console.error(error);
   }
+  let abortController;
+async function createBareRequest (url) {
+  if (abortController) {
+    abortController.abort();
+  }
+  abortController = new AbortController();
+  url = new URL(url);
+  return fetch(__uv$config.bare + "v1/", {
+    signal: abortController.signal,
+    method: "GET",
+    headers: {
+      "cookie": document.cookie,
+      "x-bare-forward-headers": '["accept-encoding","connection","content-length"]',
+      "x-bare-headers": JSON.stringify({
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "upgrade-insecure-requests": "1",
+        "user-agent": navigator.userAgent,
+        "referer": url.href,
+        "Host": url.host
+      }),
+      "x-bare-host": url.host,
+      "x-bare-path": url.pathname + url.search,
+      "x-bare-protocol": url.protocol,
+      "x-bare-port": url.port ? url.port : (url.protocol === "https:" ? 443 : 80),
+    }
+  });
+}
 });

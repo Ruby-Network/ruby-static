@@ -13,12 +13,18 @@ const errorCode = document.getElementById("uv-error-code");
 const iframe = document.getElementById("uv-iframe");
 let proxytype = localStorage.getItem("proxy");
 let currenturl = window.location.href;
+let controlCenter = document.getElementById("iframe-control");
+let urlBar = document.getElementById("url-bar");
+//let loader = document.getElementById("loader");
 // import { proxyApi, prefix } from "/aero/config.js";
+
+
 // // import ProxyManager from "./sdk/ProxyManager.js";
 if (proxytype === "Ultraviolet") {
   document
     .getElementById("uv-form")
     .addEventListener("submit", async (event) => {
+      //console.error(event)
       event.preventDefault();
       const address = document.getElementById("uv-address");
       try {
@@ -57,8 +63,20 @@ if (proxytype === "Ultraviolet") {
         window.location = '/games/'
       }
       else {
+        controlCenter.classList.remove("dnone");
+        urlBar.textContent = url;
         iframe.classList.remove("dnone");
         iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
+        //get the url from the iframe
+        // if you change pages in the iframe bring back the loader
+        iframe.addEventListener("load", function () {
+          //set urlBar div to the url
+          //loader.classList.add("dnone");
+          urlBar.textContent = iframe.contentWindow.location.href;
+          localStorage.setItem("urlPrevious", urlBar.textContent);
+          //urlBar.textContent = decoded(urlBar.textContent.split(__uv$config.prefix).slice(1).join(__uv$config.prefix))
+        }
+        );
       }
     });
 }
@@ -81,12 +99,29 @@ if (proxytype === "DIP") {
         }
         iframe.classList.remove("dnone");
         iframe.src = window.__DIP.config.prefix + window.__DIP.encodeURL(se);
+        controlCenter.classList.remove("dnone");
+        urlBar.textContent = se;
+        iframe.addEventListener("load", function () {
+          //set urlBar div to the url
+          urlBar.textContent = iframe.contentWindow.location.href;
+          localStorage.setItem("urlPrevious", urlBar.textContent);
+          urlBar.textContent = decoded(urlBar.textContent.split(__DIP.config.prefix).slice(1).join(__DIP.config.prefix))
+        }
+        );
         if (val.includes("https://") || val.includes("http://")) {
           if (val === 'https://now.gg' || val === 'https://www.now.gg' || val === 'https://roblox.com') {
             window.location = '/errors/nowgg-error.html'
           }
           iframe.classList.remove("dnone");
           iframe.src = window.__DIP.config.prefix + window.__DIP.encodeURL(val);
+          controlCenter.classList.remove("dnone");
+          urlBar.textContent = val;
+          iframe.addEventListener("load", function () {
+            //set urlBar div to the url
+            urlBar.textContent = iframe.contentWindow.location.href;
+            localStorage.setItem("urlPrevious", urlBar.textContent);
+            urlBar.textContent = decoded(urlBar.textContent.split(__DIP.config.prefix).slice(1).join(__DIP.config.prefix))
+          });
         }
       });
     });
@@ -115,12 +150,28 @@ if (proxytype === "Osana") {
         }
         iframe.classList.remove("dnone");
         iframe.src = __osana$config.prefix + __osana$config.codec.encode(se);
+        controlCenter.classList.remove("dnone");
+        urlBar.textContent = se;
+        iframe.addEventListener("load", function () {
+          //set urlBar div to the url
+          urlBar.textContent = iframe.contentWindow.location.href;
+          localStorage.setItem("urlPrevious", urlBar.textContent);
+          urlBar.textContent = decoded(urlBar.textContent.split(__osana$config.prefix).slice(1).join(__osana$config.prefix))
+        });
         if (val.includes("https://") || val.includes("http://")) {
           if (val === 'https://now.gg' || val === 'https://www.now.gg' || val === 'https://roblox.com') {
             window.location = '/errors/nowgg-error.html'
           }
           iframe.classList.remove("dnone");
           iframe.src = __osana$config.prefix + __osana$config.codec.encode(val);
+          controlCenter.classList.remove("dnone");
+        urlBar.textContent = val;
+        iframe.addEventListener("load", function () {
+          //set urlBar div to the url
+          urlBar.textContent = iframe.contentWindow.location.href;
+          localStorage.setItem("urlPrevious", urlBar.textContent);
+          urlBar.textContent = decoded(urlBar.textContent.split(__osana$config.prefix).slice(1).join(__osana$config.prefix))
+        });
         }
       });
     });
@@ -167,3 +218,12 @@ if (proxytype === "Osana") {
 //   }
 
 // }
+function decoded(str) {
+  if (str.charAt(str.length - 1) == "/") str = str.slice(0, -1);
+  return decodeURIComponent(str)
+    .split("")
+    .map((char, ind) =>
+      ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
+    )
+    .join("");
+}
