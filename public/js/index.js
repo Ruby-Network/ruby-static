@@ -74,7 +74,7 @@ if (proxytype === "Ultraviolet") {
           //loader.classList.add("dnone");
           urlBar.textContent = iframe.contentWindow.location.href;
           localStorage.setItem("urlPrevious", urlBar.textContent);
-          //urlBar.textContent = decoded(urlBar.textContent.split(__uv$config.prefix).slice(1).join(__uv$config.prefix))
+          urlBar.textContent = decoded(urlBar.textContent.split(__uv$config.prefix).slice(1).join(__uv$config.prefix))
         }
         );
       }
