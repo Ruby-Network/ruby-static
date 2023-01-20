@@ -64,7 +64,7 @@ if (proxytype === "Ultraviolet") {
       }
       else {
         controlCenter.classList.remove("dnone");
-        urlBar.textContent = url;
+        urlBar.value = url;
         iframe.classList.remove("dnone");
         iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
         //get the url from the iframe
@@ -72,9 +72,8 @@ if (proxytype === "Ultraviolet") {
         iframe.addEventListener("load", function () {
           //set urlBar div to the url
           //loader.classList.add("dnone");
-          urlBar.textContent = iframe.contentWindow.location.href;
-          localStorage.setItem("urlPrevious", urlBar.textContent);
-          urlBar.textContent = decoded(urlBar.textContent.split(__uv$config.prefix).slice(1).join(__uv$config.prefix))
+          urlBar.value = iframe.contentWindow.location.href;
+          urlBar.value = decoded(urlBar.value.split(__uv$config.prefix).slice(1).join(__uv$config.prefix))
         }
         );
       }
@@ -100,12 +99,11 @@ if (proxytype === "DIP") {
         iframe.classList.remove("dnone");
         iframe.src = window.__DIP.config.prefix + window.__DIP.encodeURL(se);
         controlCenter.classList.remove("dnone");
-        urlBar.textContent = se;
+        urlBar.value = se;
         iframe.addEventListener("load", function () {
           //set urlBar div to the url
-          urlBar.textContent = iframe.contentWindow.location.href;
-          localStorage.setItem("urlPrevious", urlBar.textContent);
-          urlBar.textContent = decoded(urlBar.textContent.split(__DIP.config.prefix).slice(1).join(__DIP.config.prefix))
+          urlBar.value = iframe.contentWindow.location.href;
+          urlBar.value = decoded(urlBar.value.split(__DIP.config.prefix).slice(1).join(__DIP.config.prefix))
         }
         );
         if (val.includes("https://") || val.includes("http://")) {
@@ -115,12 +113,12 @@ if (proxytype === "DIP") {
           iframe.classList.remove("dnone");
           iframe.src = window.__DIP.config.prefix + window.__DIP.encodeURL(val);
           controlCenter.classList.remove("dnone");
-          urlBar.textContent = val;
+          urlBar.value = val;
           iframe.addEventListener("load", function () {
             //set urlBar div to the url
-            urlBar.textContent = iframe.contentWindow.location.href;
-            localStorage.setItem("urlPrevious", urlBar.textContent);
-            urlBar.textContent = decoded(urlBar.textContent.split(__DIP.config.prefix).slice(1).join(__DIP.config.prefix))
+            urlBar.value = iframe.contentWindow.location.href;
+            localStorage.setItem("urlPrevious", urlBar.value);
+            urlBar.value = decoded(urlBar.value.split(__DIP.config.prefix).slice(1).join(__DIP.config.prefix))
           });
         }
       });
@@ -151,12 +149,12 @@ if (proxytype === "Osana") {
         iframe.classList.remove("dnone");
         iframe.src = __osana$config.prefix + __osana$config.codec.encode(se);
         controlCenter.classList.remove("dnone");
-        urlBar.textContent = se;
+        urlBar.value = se;
         iframe.addEventListener("load", function () {
           //set urlBar div to the url
-          urlBar.textContent = iframe.contentWindow.location.href;
-          localStorage.setItem("urlPrevious", urlBar.textContent);
-          urlBar.textContent = decoded(urlBar.textContent.split(__osana$config.prefix).slice(1).join(__osana$config.prefix))
+          urlBar.value = iframe.contentWindow.location.href;
+          localStorage.setItem("urlPrevious", urlBar.value);
+          urlBar.value = decoded(urlBar.value.split(__osana$config.prefix).slice(1).join(__osana$config.prefix))
         });
         if (val.includes("https://") || val.includes("http://")) {
           if (val === 'https://now.gg' || val === 'https://www.now.gg' || val === 'https://roblox.com') {
@@ -165,12 +163,12 @@ if (proxytype === "Osana") {
           iframe.classList.remove("dnone");
           iframe.src = __osana$config.prefix + __osana$config.codec.encode(val);
           controlCenter.classList.remove("dnone");
-        urlBar.textContent = val;
+        urlBar.value = val;
         iframe.addEventListener("load", function () {
           //set urlBar div to the url
-          urlBar.textContent = iframe.contentWindow.location.href;
-          localStorage.setItem("urlPrevious", urlBar.textContent);
-          urlBar.textContent = decoded(urlBar.textContent.split(__osana$config.prefix).slice(1).join(__osana$config.prefix))
+          urlBar.value = iframe.contentWindow.location.href;
+          localStorage.setItem("urlPrevious", urlBar.value);
+          urlBar.value = decoded(urlBar.value.split(__osana$config.prefix).slice(1).join(__osana$config.prefix))
         });
         }
       });
