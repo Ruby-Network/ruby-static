@@ -210,6 +210,16 @@
       --scroll-bar-thumb-hover-color: #ffffff;
       --input-bg-color: #242933;
     }
+    .earth {
+      --bg-color: #285430;
+      --text-color: #E5D9B6;
+      --border-color: #E5D9B6;
+      --text-bg-color: #5F8D4E;
+      --scroll-bar-track-color: #285430;
+      --scroll-bar-thumb-color: #E5D9B6;
+      --scroll-bar-thumb-hover-color: #E5D9B6;
+      --input-bg-color: #285430;
+    }
     .connected {
     --bg-color: #1c1b29;
     --text-color: #43b581;

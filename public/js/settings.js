@@ -305,6 +305,10 @@ function changeTheme(value) {
       changeBgEffect('blocks');
       localStorage.setItem('autoChanged', 'true')
     }
+    else if (value === 'earth') {
+      changeBgEffect('triangles-and-circles');
+      localStorage.setItem('autoChanged', 'true')
+    }
     else {
       if (localStorage.getItem('bgEffect') !== 'none') {
         changeBgEffect('none');
@@ -363,6 +367,9 @@ function changeBgEffect(value, manual) {
   if (value === 'blocks') {
     updateBgEffect('blocks-pjs');
   }
+  if (value === 'triangles-and-circles') {
+    updateBgEffect('triangles-and-circles-pjs');
+  }
   window.location.reload();
 }
 function updateBgEffect(add) {
@@ -393,6 +400,9 @@ if (bgEffect !== 'none') {
   if (bgEffect === 'blocks') {
     updateBgEffect('blocks-pjs');
   }
+  if (bgEffect === 'triangles-and-circles') {
+    updateBgEffect('triangles-and-circles-pjs');
+  }
 }
 }
 else {
@@ -416,6 +426,9 @@ if (bgEffect !== 'none') {
   }
   if (bgEffect === 'blocks') {
     updateBgEffect('blocks-pjs');
+  }
+  if (bgEffect === 'triangles-and-circles') {
+    updateBgEffect('triangles-and-circles-pjs');
   }
 }
 }
